@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var tipCustomSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
