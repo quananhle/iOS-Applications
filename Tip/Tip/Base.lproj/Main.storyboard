@@ -84,7 +84,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hfL-en-TBq">
-                                <rect key="frame" x="11" y="128" width="149" height="32"/>
+                                <rect key="frame" x="11" y="128" width="167" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Together"/>
@@ -104,6 +104,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="partySize:" destination="BYZ-38-t0r" eventType="editingChanged" id="l8t-tG-XIf"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78n-3S-IoJ">
                                 <rect key="frame" x="202" y="392" width="167" height="21"/>
@@ -122,6 +125,8 @@
                     </view>
                     <connections>
                         <outlet property="billAmountTextField" destination="m4l-79-NOY" id="mlp-ox-7Fe"/>
+                        <outlet property="partyControl" destination="hfL-en-TBq" id="oEl-Fd-L9u"/>
+                        <outlet property="partyNumberTextField" destination="7Zs-FD-TOc" id="kQZ-rZ-M5k"/>
                         <outlet property="tipAmountLabel" destination="Q3H-Oz-nD3" id="saX-ZS-21B"/>
                         <outlet property="tipControl" destination="NBE-8C-dmY" id="P7r-NS-64M"/>
                         <outlet property="tipCustomSlider" destination="OfH-Ak-ttp" id="2oo-1f-mnH"/>

@@ -11,12 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var billAmountTextField: UITextField!
+    @IBOutlet weak var partyControl: UISegmentedControl!
+    @IBOutlet weak var partyNumberTextField: UITextField!
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
-    @IBOutlet weak var totalLabel: UILabel!
-    @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var tipCustomSlider: UISlider!
-    
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,6 +35,15 @@ class ViewController: UIViewController {
         //update the tip and total labels
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+    }
+    @IBAction func partySize(_ sender: Any) {
+        let isPayingTogether = [true, false]
+        if isPayingTogether[partyControl.selectedSegmentIndex] {
+            partyNumberTextField.isUserInteractionEnabled = false
+        }
+        else {
+            partyNumberTextField.isUserInteractionEnabled = true
+        }
     }
 }
 
