@@ -37,12 +37,11 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
     }
     @IBAction func partySize(_ sender: Any) {
-        let isPayingTogether = [true, false]
-        if isPayingTogether[partyControl.selectedSegmentIndex] {
-            partyNumberTextField.isUserInteractionEnabled = false
+        if partyControl.selectedSegmentIndex == 0 {
+            partyNumberTextField.isEnabled = true
         }
         else {
-            partyNumberTextField.isUserInteractionEnabled = true
+            partyNumberTextField.isEnabled = false
         }
     }
 }
