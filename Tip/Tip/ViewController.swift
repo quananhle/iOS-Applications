@@ -37,12 +37,12 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
     }
     @IBAction func partySize(_ sender: Any) {
-        if partyControl.selectedSegmentIndex == 0 {
-            partyNumberTextField.isEnabled = true
-        }
-        else {
-            partyNumberTextField.isEnabled = false
-        }
+//        if partyControl.selectedSegmentIndex == 0 {
+//            partyNumberTextField.isEnabled = true
+//        }
+//        else {
+//            partyNumberTextField.isEnabled = false
+//        }
     }
 }
 
