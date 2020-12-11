@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         partyNumberTextField.delegate = self
+//        billAmountTextField.delegate = self
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -33,8 +34,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if ((string == "0" || string == "") && (textField.text! as NSString).range(of: ".").location < range.location) {
+    func textField(_ billAmountTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if ((string == "0" || string == "") && (billAmountTextField.text! as NSString).range(of: ".").location < range.location) {
             return true
         }
 
@@ -54,7 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             formatter.maximumFractionDigits = 8
             // Combine the new text with the old; then remove any
             // commas from the textField before formatting
-            let newString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+            let newString = (billAmountTextField.text! as NSString).replacingCharacters(in: range, with: string)
             let numberWithOutCommas = newString.replacingOccurrences(of: ",", with: "")
             let number = formatter.number(from: numberWithOutCommas)
             if number != nil {
@@ -62,12 +63,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 // If the last entry was a decimal or a zero after a decimal,
                 // re-add it here because the formatter will naturally remove
                 // it.
-                if string == "." && range.location == textField.text?.count {
+                if string == "." && range.location == billAmountTextField.text?.count {
                     formattedString = formattedString?.appending(".")
                 }
-                textField.text = formattedString
+                billAmountTextField.text = formattedString
             } else {
-                textField.text = nil
+                billAmountTextField.text = nil
             }
         }
         return false
@@ -87,8 +88,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //update the tip and total labels
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
-        
     }
+    
+    
     @IBAction func partySize(_ sender: Any) {
 //        if partyControl.selectedSegmentIndex == 0 {
 //            partyNumberTextField.isEnabled = false
@@ -97,16 +99,4 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //            partyNumberTextField.isEnabled = false
 //        }
     }
-    
-
-    
-    
-
 }
-extension String {
-    var digitsOnly: String {
-        return components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
-    }
-}
-
-
