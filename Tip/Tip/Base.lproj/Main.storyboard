@@ -108,6 +108,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <connections>
                                     <action selector="partySize:" destination="BYZ-38-t0r" eventType="editingChanged" id="l8t-tG-XIf"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="kpY-5L-Pnl"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Party of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzA-7D-yPo">
@@ -127,7 +128,7 @@
                     </view>
                     <connections>
                         <outlet property="billAmountTextField" destination="m4l-79-NOY" id="mlp-ox-7Fe"/>
-                        <outlet property="myTextField" destination="m4l-79-NOY" id="kCQ-fZ-WMB"/>
+                        <outlet property="myTextField" destination="7Zs-FD-TOc" id="CKJ-2J-SnI"/>
                         <outlet property="partyControl" destination="hfL-en-TBq" id="oEl-Fd-L9u"/>
                         <outlet property="partyNumberTextField" destination="7Zs-FD-TOc" id="kQZ-rZ-M5k"/>
                         <outlet property="tipAmountLabel" destination="Q3H-Oz-nD3" id="saX-ZS-21B"/>

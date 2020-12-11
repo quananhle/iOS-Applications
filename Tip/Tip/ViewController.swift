@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var billAmountTextField: UITextField!
-    @IBOutlet weak var myTextField: UITextField!
     @IBOutlet weak var partyControl: UISegmentedControl!
     @IBOutlet weak var partyNumberTextField: UITextField!
     @IBOutlet weak var tipPercentageLabel: UILabel!
@@ -25,7 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        myTextField.delegate = self
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -67,13 +65,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         return false
     }
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if textField == myTextField {
-            return false; //do not show keyboard nor cursor
-        }
-        return true
-    }
 
+    
     @IBAction func onTap(_ sender: Any) {
     }
     
