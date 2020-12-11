@@ -36,6 +36,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="NZU-jY-GX1"/>
+                                    <action selector="textField:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="y5Q-5x-Mrm"/>
                                     <outlet property="delegate" destination="8bC-Xf-vdC" id="kBG-vK-YzE"/>
                                 </connections>
                             </textField>
@@ -126,9 +127,9 @@
                     </view>
                     <connections>
                         <outlet property="billAmountTextField" destination="m4l-79-NOY" id="mlp-ox-7Fe"/>
+                        <outlet property="myTextField" destination="m4l-79-NOY" id="kCQ-fZ-WMB"/>
                         <outlet property="partyControl" destination="hfL-en-TBq" id="oEl-Fd-L9u"/>
                         <outlet property="partyNumberTextField" destination="7Zs-FD-TOc" id="kQZ-rZ-M5k"/>
-                        <outlet property="textField" destination="m4l-79-NOY" id="xx5-l5-oR1"/>
                         <outlet property="tipAmountLabel" destination="Q3H-Oz-nD3" id="saX-ZS-21B"/>
                         <outlet property="tipControl" destination="NBE-8C-dmY" id="P7r-NS-64M"/>
                         <outlet property="tipCustomSlider" destination="OfH-Ak-ttp" id="2oo-1f-mnH"/>
