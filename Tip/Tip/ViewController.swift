@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var partyControl: UISegmentedControl!
