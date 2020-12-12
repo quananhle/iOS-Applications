@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+//class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController{
     
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var partyControl: UISegmentedControl!
@@ -24,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         partyNumberTextField.delegate = self
-        billAmountTextField.delegate = self
+//        billAmountTextField.delegate = self
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -33,7 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-    
+    /*
     func textField(_ billAmountTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if ((string == "0" || string == "") && (billAmountTextField.text! as NSString).range(of: ".").location < range.location) {
             return true
@@ -73,6 +74,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         return false
     }
+     */
 
     
     @IBAction func onTap(_ sender: Any) {
