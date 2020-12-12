@@ -126,8 +126,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="billAmountFormatter" destination="m4l-79-NOY" id="saR-Xx-jtb"/>
-                        <outlet property="billAmountTextField" destination="m4l-79-NOY" id="mlp-ox-7Fe"/>
+                        <outlet property="billAmountTextField" destination="m4l-79-NOY" id="ghe-R0-4kf"/>
                         <outlet property="partyControl" destination="hfL-en-TBq" id="oEl-Fd-L9u"/>
                         <outlet property="partyNumberTextField" destination="7Zs-FD-TOc" id="kQZ-rZ-M5k"/>
                         <outlet property="tipAmountLabel" destination="Q3H-Oz-nD3" id="saX-ZS-21B"/>

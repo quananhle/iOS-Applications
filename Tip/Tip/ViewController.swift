@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         partyNumberTextField.delegate = self
-//        billAmountTextField.delegate = self
+        billAmountTextField.delegate = self
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
