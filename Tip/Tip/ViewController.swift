@@ -95,12 +95,26 @@ class ViewController: UIViewController{
     
     
     @IBAction func partySize(_ sender: Any) {
-        
-        if partyControl.selectedSegmentIndex == 0 {
-            partyNumberTextField.isEnabled = false
+        let partySize = [false, true]
+        if (false == partySize[partyControl.selectedSegmentIndex]) {
+            partyNumberTextField.tintColor = UIColor.lightGray
+            partyNumberTextField.isUserInteractionEnabled = false
         }
         else {
-            partyNumberTextField.isEnabled = false
+            partyNumberTextField.tintColor = nil
+            partyNumberTextField.isUserInteractionEnabled = true
         }
+        
+//        let sortedViews = sender.subviews.sorted( by: { $0.frame.origin.x < $1.frame.origin.x } )
+//
+//        for (index, view) in sortedViews.enumerated() {
+//            if index == sender.selectedSegmentIndex {
+//                view.tintColor = UIColor.red
+//            } else {
+//                view.tintColor = UIColor.green
+//            }
+//        }
+        
+        
     }
 }
