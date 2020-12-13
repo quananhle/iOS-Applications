@@ -24,7 +24,7 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        partyNumberTextField.delegate = self
+//        partyNumberTextField.delegate = self
 //        billAmountTextField.delegate = self
     }
     
@@ -94,11 +94,12 @@ class ViewController: UIViewController{
     
     
     @IBAction func partySize(_ sender: Any) {
-//        if partyControl.selectedSegmentIndex == 0 {
-//            partyNumberTextField.isEnabled = false
-//        }
-//        else {
-//            partyNumberTextField.isEnabled = false
-//        }
+        partyNumberTextField.isUserInteractionEnabled = false
+        if partyControl.selectedSegmentIndex == 0 {
+            partyNumberTextField.isEnabled = false
+        }
+        else {
+            partyNumberTextField.isEnabled = false
+        }
     }
 }
