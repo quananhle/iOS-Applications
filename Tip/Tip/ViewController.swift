@@ -26,6 +26,7 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view.
 //        partyNumberTextField.delegate = self
 //        billAmountTextField.delegate = self
+        partyNumberTextField.isUserInteractionEnabled = false
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -94,7 +95,7 @@ class ViewController: UIViewController{
     
     
     @IBAction func partySize(_ sender: Any) {
-        partyNumberTextField.isUserInteractionEnabled = false
+        
         if partyControl.selectedSegmentIndex == 0 {
             partyNumberTextField.isEnabled = false
         }
