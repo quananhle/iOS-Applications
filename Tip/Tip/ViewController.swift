@@ -75,15 +75,28 @@ class ViewController: UIViewController{
     }
     
     @IBAction func calculateTip(_ sender: Any) {
+        var tipAmount = 0.0
+        let sliderTip = Double(tipCustomSlider.value)
         //get initial bill amount and calculate tips
         let bill = Double(billAmountTextField.text!) ?? 0
         let tipPercentages = [0.15, 0.18, 0.2]
-        let tipAmount = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        if sliderTip != 0 && true == tipControl.isSelected {
+            tipControl.isSelected = false
+            tipAmount = bill * (sliderTip / 100)
+            tipAmountLabel.text = String(format: "$%.2f", tipAmount)
+            tipPercentageLabel.text = String(format: "%.2f", sliderTip) + "%"
+        }
+        if true == tipControl.isSelected {
+            tipCustomSlider.value = 0
+            tipAmount = bill * tipPercentages[tipControl.selectedSegmentIndex]
+            tipAmountLabel.text = String(format: "$%.2f", tipAmount)
+            tipPercentageLabel.text = String(format: "%.2f", tipPercentages[tipControl.selectedSegmentIndex] * 100) + "%"
+        }
         //calculate tip and total
         let total = bill + tipAmount
         //update the tip and total labels
-        tipAmountLabel.text = String(format: "$%.2f", tipAmount)
-        tipPercentageLabel.text = String(format: "%.2f", tipPercentages[tipControl.selectedSegmentIndex] * 100)+"%"
+//        tipAmountLabel.text = String(format: "$%.2f", tipAmount)
+//        tipPercentageLabel.text = String(format: "%.2f", tipPercentages[tipControl.selectedSegmentIndex] * 100)+"%"
         totalLabel.text = String(format: "$%.2f", total)
     }
     
