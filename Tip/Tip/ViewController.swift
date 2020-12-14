@@ -26,6 +26,7 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view.
 //        partyNumberTextField.delegate = self
 //        billAmountTextField.delegate = self
+        partyNumberTextField.isUserInteractionEnabled = false
     }
     /*
     func textField(_ billAmountTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -72,27 +73,34 @@ class ViewController: UIViewController{
         view.endEditing(true)
     }
     
-    @IBAction func calculateTip(_ sender: UITextField) {
+    
+    
+    @IBAction func calculateTip(_ sender: Any) {
         //get initial bill amount and calculate tips
         let bill = Double(billAmountTextField.text!) ?? 0
+        if bill != nil && bill != 0 {
+            partyNumberTextField.isUserInteractionEnabled = true
+        }
         let tipPercentages = [0.15, 0.18, 0.2]
+        let tipAmount = bill * tipPercentages[tipControl.selectedSegmentIndex]
         //calculate tip and total
-        let total = bill + bill * tipPercentages[tipControl.selectedSegmentIndex]
+        let total = bill + tipAmount
         //update the tip and total labels
+        tipAmountLabel.text = String(format: "$%.2f", tipAmount)
         tipPercentageLabel.text = String(format: "%.2f", tipPercentages[tipControl.selectedSegmentIndex] * 100)+"%"
         totalLabel.text = String(format: "$%.2f", total)
     }
     
-    @IBAction func partySize(_ sender: Any) {
-        partyNumberTextField.isUserInteractionEnabled = false
-        let partySize = [false, true]
-        if (false == partySize[partyControl.selectedSegmentIndex]) {
-            partyNumberTextField.backgroundColor = UIColor.lightGray
-            partyNumberTextField.isUserInteractionEnabled = false
-        }
-        else {
-            partyNumberTextField.backgroundColor = nil
-            partyNumberTextField.isUserInteractionEnabled = true
-        }
-    }
+//    @IBAction func partySize(_ sender: Any) {
+//        partyNumberTextField.isUserInteractionEnabled = false
+//        let partySize = [false, true]
+//        if (false == partySize[partyControl.selectedSegmentIndex]) {
+//            partyNumberTextField.backgroundColor = UIColor.lightGray
+//            partyNumberTextField.isUserInteractionEnabled = false
+//        }
+//        else {
+//            partyNumberTextField.backgroundColor = nil
+//            partyNumberTextField.isUserInteractionEnabled = true
+//        }
+//    }
 }
