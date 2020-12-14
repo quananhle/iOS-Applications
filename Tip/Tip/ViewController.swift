@@ -27,6 +27,7 @@ class ViewController: UIViewController{
 //        partyNumberTextField.delegate = self
 //        billAmountTextField.delegate = self
         partyNumberTextField.isUserInteractionEnabled = false
+        partyNumberTextField.backgroundColor = UIColor.lightGray
     }
     /*
     func textField(_ billAmountTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -73,14 +74,9 @@ class ViewController: UIViewController{
         view.endEditing(true)
     }
     
-    
-    
     @IBAction func calculateTip(_ sender: Any) {
         //get initial bill amount and calculate tips
         let bill = Double(billAmountTextField.text!) ?? 0
-        if bill != nil && bill != 0 {
-            partyNumberTextField.isUserInteractionEnabled = true
-        }
         let tipPercentages = [0.15, 0.18, 0.2]
         let tipAmount = bill * tipPercentages[tipControl.selectedSegmentIndex]
         //calculate tip and total
@@ -91,16 +87,21 @@ class ViewController: UIViewController{
         totalLabel.text = String(format: "$%.2f", total)
     }
     
-//    @IBAction func partySize(_ sender: Any) {
-//        partyNumberTextField.isUserInteractionEnabled = false
-//        let partySize = [false, true]
-//        if (false == partySize[partyControl.selectedSegmentIndex]) {
-//            partyNumberTextField.backgroundColor = UIColor.lightGray
-//            partyNumberTextField.isUserInteractionEnabled = false
-//        }
-//        else {
-//            partyNumberTextField.backgroundColor = nil
-//            partyNumberTextField.isUserInteractionEnabled = true
-//        }
-//    }
+    @IBAction func partySize(_ sender: Any) {
+        let bill = Double(billAmountTextField.text!) ?? 0
+        let partySize = [false, true]
+        if bill != 0 &&
+            true == partySize[partyControl.selectedSegmentIndex]{
+            partyNumberTextField.backgroundColor = UIColor.white
+            partyNumberTextField.isUserInteractionEnabled = true
+        }
+        else if bill != 0 && false == partySize[partyControl.selectedSegmentIndex]{
+            partyNumberTextField.backgroundColor = UIColor.lightGray
+            partyNumberTextField.isUserInteractionEnabled = false
+        }
+        else {
+            partyNumberTextField.backgroundColor = UIColor.lightGray
+            partyNumberTextField.isUserInteractionEnabled = false
+        }
+    }
 }
