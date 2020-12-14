@@ -89,6 +89,7 @@ class ViewController: UIViewController{
     
     @IBAction func partySize(_ sender: Any) {
         let bill = Double(billAmountTextField.text!) ?? 0
+        let party = Int(partyNumberTextField.text!) ?? 0
         let partySize = [false, true]
         if bill != 0 &&
             true == partySize[partyControl.selectedSegmentIndex]{
