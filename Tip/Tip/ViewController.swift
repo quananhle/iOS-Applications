@@ -78,6 +78,7 @@ class ViewController: UIViewController{
 
     
     @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
     }
     
     @IBAction func calculateTip(_ sender: UITextField) {
@@ -86,14 +87,6 @@ class ViewController: UIViewController{
         let tipPercentages = [0.15, 0.18, 0.2]
         //calculate tip and total
         let total = bill + bill * tipPercentages[tipControl.selectedSegmentIndex]
-        //format percentage
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .percent
-        formatter.minimumIntegerDigits = 1
-        formatter.maximumIntegerDigits = 1
-        formatter.maximumFractionDigits = 2
-        
-        
         //update the tip and total labels
         tipPercentageLabel.text = String(format: "%.2f", tipPercentages[tipControl.selectedSegmentIndex] * 100)+"%"
         totalLabel.text = String(format: "$%.2f", total)
@@ -120,7 +113,5 @@ class ViewController: UIViewController{
 //                view.tintColor = UIColor.green
 //            }
 //        }
-        
-        
     }
 }
