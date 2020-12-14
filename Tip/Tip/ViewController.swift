@@ -75,29 +75,26 @@ class ViewController: UIViewController{
     }
     
     @IBAction func calculateTip(_ sender: Any) {
-        var tipAmount = 0.0
-        let sliderTip = Double(tipCustomSlider.value)
-//        tipPercentageLabel.text = String(format: "%.2f", sliderTip) + "%"
         //get initial bill amount and calculate tips
+        var tipAmount = 0.0, tipPercentage = 0.0
+        let sliderTip = Double(tipCustomSlider.value)
         let bill = Double(billAmountTextField.text!) ?? 0
         let tipPercentages = [0.15, 0.18, 0.2, 0.0]
-        if sliderTip != 0 {
-            tipControl.selectedSegmentIndex = 3
-            tipAmount = bill * (sliderTip / 100)
-            tipAmountLabel.text = String(format: "$%.2f", tipAmount)
-            tipPercentageLabel.text = String(format: "%.2f", sliderTip) + "%"
+        if tipControl.selectedSegmentIndex == 3 {
+            tipPercentage = sliderTip / 100
+            tipAmount = bill * tipPercentage
         }
-        else if tipControl.selectedSegmentIndex != 3 {
+//        if tipControl.selectedSegmentIndex != 3{
+        else {
             tipCustomSlider.value = 0
-            tipAmount = bill * tipPercentages[tipControl.selectedSegmentIndex]
-            tipAmountLabel.text = String(format: "$%.2f", tipAmount)
-            tipPercentageLabel.text = String(format: "%.2f", tipPercentages[tipControl.selectedSegmentIndex] * 100) + "%"
+            tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+            tipAmount = bill * tipPercentage
         }
         //calculate tip and total
         let total = bill + tipAmount
         //update the tip and total labels
-//        tipAmountLabel.text = String(format: "$%.2f", tipAmount)
-//        tipPercentageLabel.text = String(format: "%.2f", tipPercentages[tipControl.selectedSegmentIndex] * 100)+"%"
+        tipAmountLabel.text = String(format: "$%.2f", tipAmount)
+        tipPercentageLabel.text = String(format: "%.2f", tipPercentage * 100) + "%"
         totalLabel.text = String(format: "$%.2f", total)
     }
     
