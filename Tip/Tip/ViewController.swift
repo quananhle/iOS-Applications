@@ -80,14 +80,14 @@ class ViewController: UIViewController{
 //        tipPercentageLabel.text = String(format: "%.2f", sliderTip) + "%"
         //get initial bill amount and calculate tips
         let bill = Double(billAmountTextField.text!) ?? 0
-        let tipPercentages = [0.15, 0.18, 0.2]
-        if sliderTip != 0{
-            tipControl.isSelected = false
+        let tipPercentages = [0.15, 0.18, 0.2, 0.0]
+        if sliderTip != 0 {
+            tipControl.selectedSegmentIndex = 3
             tipAmount = bill * (sliderTip / 100)
             tipAmountLabel.text = String(format: "$%.2f", tipAmount)
             tipPercentageLabel.text = String(format: "%.2f", sliderTip) + "%"
         }
-        else if true == tipControl.isSelected {
+        else if tipControl.selectedSegmentIndex != 3 {
             tipCustomSlider.value = 0
             tipAmount = bill * tipPercentages[tipControl.selectedSegmentIndex]
             tipAmountLabel.text = String(format: "$%.2f", tipAmount)
