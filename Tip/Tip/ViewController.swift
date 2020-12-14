@@ -26,7 +26,6 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view.
 //        partyNumberTextField.delegate = self
 //        billAmountTextField.delegate = self
-        partyNumberTextField.isUserInteractionEnabled = false
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -86,22 +85,29 @@ class ViewController: UIViewController{
         let bill = Double(billAmountTextField.text!) ?? 0
         let tipPercentages = [0.15, 0.18, 0.2]
         //calculate tip and total
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
-        let total = bill + tip
+        let total = bill + bill * tipPercentages[tipControl.selectedSegmentIndex]
+        //format percentage
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        formatter.minimumIntegerDigits = 1
+        formatter.maximumIntegerDigits = 1
+        formatter.maximumFractionDigits = 2
+        
+        
         //update the tip and total labels
-        tipPercentageLabel.text = String(format: "$%.2f", tip)
+        tipPercentageLabel.text = String(format: "%.2f", tipPercentages[tipControl.selectedSegmentIndex] * 100)+"%"
         totalLabel.text = String(format: "$%.2f", total)
     }
     
-    
     @IBAction func partySize(_ sender: Any) {
+        partyNumberTextField.isUserInteractionEnabled = false
         let partySize = [false, true]
         if (false == partySize[partyControl.selectedSegmentIndex]) {
-            partyNumberTextField.tintColor = UIColor.lightGray
+            partyNumberTextField.backgroundColor = UIColor.lightGray
             partyNumberTextField.isUserInteractionEnabled = false
         }
         else {
-            partyNumberTextField.tintColor = nil
+            partyNumberTextField.backgroundColor = nil
             partyNumberTextField.isUserInteractionEnabled = true
         }
         
