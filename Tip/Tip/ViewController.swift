@@ -27,13 +27,6 @@ class ViewController: UIViewController{
 //        partyNumberTextField.delegate = self
 //        billAmountTextField.delegate = self
     }
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if textField == partyNumberTextField {
-            return false; //do not show keyboard nor cursor
-        }
-        return true
-    }
     /*
     func textField(_ billAmountTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if ((string == "0" || string == "") && (billAmountTextField.text! as NSString).range(of: ".").location < range.location) {
@@ -75,8 +68,6 @@ class ViewController: UIViewController{
         return false
     }
      */
-
-    
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
     }
@@ -103,15 +94,5 @@ class ViewController: UIViewController{
             partyNumberTextField.backgroundColor = nil
             partyNumberTextField.isUserInteractionEnabled = true
         }
-        
-//        let sortedViews = sender.subviews.sorted( by: { $0.frame.origin.x < $1.frame.origin.x } )
-//
-//        for (index, view) in sortedViews.enumerated() {
-//            if index == sender.selectedSegmentIndex {
-//                view.tintColor = UIColor.red
-//            } else {
-//                view.tintColor = UIColor.green
-//            }
-//        }
     }
 }
