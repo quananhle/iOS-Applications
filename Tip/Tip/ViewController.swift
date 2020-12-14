@@ -84,7 +84,6 @@ class ViewController: UIViewController{
             tipPercentage = sliderTip / 100
             tipAmount = bill * tipPercentage
         }
-//        if tipControl.selectedSegmentIndex != 3{
         else {
             tipCustomSlider.value = 0
             tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
