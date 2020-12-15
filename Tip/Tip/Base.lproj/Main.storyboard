@@ -107,7 +107,7 @@
                                     <action selector="partySize:" destination="BYZ-38-t0r" eventType="valueChanged" id="54s-1Z-SYA"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7Zs-FD-TOc">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7Zs-FD-TOc">
                                 <rect key="frame" x="305" y="125" width="64" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -116,7 +116,7 @@
                                     <action selector="partySize:" destination="BYZ-38-t0r" eventType="editingChanged" id="l8t-tG-XIf"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Party of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzA-7D-yPo">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Party of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzA-7D-yPo">
                                 <rect key="frame" x="230" y="132" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -205,8 +205,11 @@
                         <outlet property="paidButton" destination="58a-wv-cTg" id="I2H-Ig-DR8"/>
                         <outlet property="partyControl" destination="hfL-en-TBq" id="oEl-Fd-L9u"/>
                         <outlet property="partyNumberTextField" destination="7Zs-FD-TOc" id="kQZ-rZ-M5k"/>
-                        <outlet property="remainingLabel" destination="8nh-uK-qcS" id="ZIs-fs-JpD"/>
-                        <outlet property="splitLabel" destination="HND-BS-vaf" id="RQg-aX-mAA"/>
+                        <outlet property="partyOfLabel" destination="PzA-7D-yPo" id="mY8-VR-0RS"/>
+                        <outlet property="remainingAmountLabel" destination="8nh-uK-qcS" id="Wvy-wp-OiO"/>
+                        <outlet property="remainingLabel" destination="lws-JS-QAi" id="s6L-5d-xrY"/>
+                        <outlet property="splitAmountLabel" destination="HND-BS-vaf" id="cW9-6O-Tlw"/>
+                        <outlet property="splitBillLabel" destination="1QO-C7-lF1" id="Vt9-wP-DV4"/>
                         <outlet property="tipAmountLabel" destination="Q3H-Oz-nD3" id="saX-ZS-21B"/>
                         <outlet property="tipControl" destination="NBE-8C-dmY" id="P7r-NS-64M"/>
                         <outlet property="tipCustomSlider" destination="OfH-Ak-ttp" id="2oo-1f-mnH"/>

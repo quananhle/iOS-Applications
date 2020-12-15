@@ -13,6 +13,7 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var partyControl: UISegmentedControl!
+    @IBOutlet weak var partyOfLabel: UILabel!
     @IBOutlet weak var partyNumberTextField: UITextField!
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
@@ -21,8 +22,12 @@ class ViewController: UIViewController{
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var paidButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
-    @IBOutlet weak var splitLabel: UILabel!
+    
+    @IBOutlet weak var splitBillLabel: UILabel!
+    @IBOutlet weak var splitAmountLabel: UILabel!
     @IBOutlet weak var remainingLabel: UILabel!
+    @IBOutlet weak var remainingAmountLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,16 +115,20 @@ class ViewController: UIViewController{
         //get the party size if not nil, else 0
         let partySize = Int(partyNumberTextField.text!) ?? 0
         let isPayingSeparately = [false, true]
-        //if bill amount is not 0 and paid separately
+        //if bill amount is not 0 and separte is selected
         if bill != 0 &&
             true == isPayingSeparately[partyControl.selectedSegmentIndex]{
+            partyOfLabel.isHidden = false
+            partyNumberTextField.isHidden = false
             partyNumberTextField.backgroundColor = UIColor.white
             partyNumberTextField.isUserInteractionEnabled = true
         }
-//        else if bill != 0 && false == isPayingSeparately[partyControl.selectedSegmentIndex]{
-//            partyNumberTextField.backgroundColor = UIColor.lightGray
-//            partyNumberTextField.isUserInteractionEnabled = false
-//        }
+        else if bill != 0 && false == isPayingSeparately[partyControl.selectedSegmentIndex] {
+            partyOfLabel.isHidden = true
+            partyNumberTextField.isHidden = true
+            partyNumberTextField.backgroundColor = UIColor.lightGray
+            partyNumberTextField.isUserInteractionEnabled = false
+        }
         else {
             partyNumberTextField.backgroundColor = UIColor.lightGray
             partyNumberTextField.isUserInteractionEnabled = false
