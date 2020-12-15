@@ -105,21 +105,31 @@ class ViewController: UIViewController{
     }
     
     @IBAction func partySize(_ sender: Any) {
+        //get the bill amount if not nil, else 0
         let bill = Double(billAmountTextField.text!) ?? 0
-        let party = Int(partyNumberTextField.text!) ?? 0
-        let partySize = [false, true]
+        //get the party size if not nil, else 0
+        let partySize = Int(partyNumberTextField.text!) ?? 0
+        let isPayingSeparately = [false, true]
+        //if bill amount is not 0 and paid separately
         if bill != 0 &&
-            true == partySize[partyControl.selectedSegmentIndex]{
+            true == isPayingSeparately[partyControl.selectedSegmentIndex]{
             partyNumberTextField.backgroundColor = UIColor.white
             partyNumberTextField.isUserInteractionEnabled = true
         }
-        else if bill != 0 && false == partySize[partyControl.selectedSegmentIndex]{
-            partyNumberTextField.backgroundColor = UIColor.lightGray
-            partyNumberTextField.isUserInteractionEnabled = false
-        }
+//        else if bill != 0 && false == isPayingSeparately[partyControl.selectedSegmentIndex]{
+//            partyNumberTextField.backgroundColor = UIColor.lightGray
+//            partyNumberTextField.isUserInteractionEnabled = false
+//        }
         else {
             partyNumberTextField.backgroundColor = UIColor.lightGray
             partyNumberTextField.isUserInteractionEnabled = false
+        }
+        if partySize != 0 {
+            paidButton.isUserInteractionEnabled = true
+            paidButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            undoButton.isUserInteractionEnabled = true
+            undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            
         }
     }
 }
