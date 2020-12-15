@@ -91,6 +91,7 @@ class ViewController: UIViewController{
         var tipAmount = 0.0, tipPercentage = 0.0
         let sliderTip = Double(tipCustomSlider.value)
         let bill = Double(billAmountTextField.text!) ?? 0
+        let partySize = Double(partyNumberTextField.text!) ?? 0
         let tipPercentages = [0.15, 0.18, 0.2, 0.0]
         if tipControl.selectedSegmentIndex == 3 {
             tipPercentage = sliderTip / 100
@@ -103,15 +104,15 @@ class ViewController: UIViewController{
         }
         //calculate tip and total
         let total = bill + tipAmount
+        let splitBill = total / partySize
         //update the tip and total labels
         tipAmountLabel.text = String(format: "$%.2f", tipAmount)
         tipPercentageLabel.text = String(format: "%.2f", tipPercentage * 100) + "%"
         totalLabel.text = String(format: "$%.2f", total)
+        splitAmountLabel.text = String(format: "$%.2f", splitBill)
     }
     
     @IBAction func partySize(_ sender: Any) {
-        let total = Double(totalLabel.text!) ?? 0
-        var splitBill = 0.0
         //get the bill amount if not nil, else 0
         let bill = Double(billAmountTextField.text!) ?? 0
         //get the party size if not nil, else 0
@@ -141,9 +142,6 @@ class ViewController: UIViewController{
             splitAmountLabel.isHidden = false
             remainingLabel.isHidden = false
             remainingAmountLabel.isHidden = false
-            
-            splitBill = total / Double(partySize)
-            splitAmountLabel.text = String(format: "$%.2f", splitBill)
         }
         else {
             paidButton.isHidden = true
