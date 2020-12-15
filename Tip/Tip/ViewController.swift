@@ -32,7 +32,9 @@ class ViewController: UIViewController{
         partyNumberTextField.isUserInteractionEnabled = false
         partyNumberTextField.backgroundColor = UIColor.lightGray
         paidButton.isUserInteractionEnabled = false
+        paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.Type)
         undoButton.isUserInteractionEnabled = false
+        undoButton.tintColor = UIColor.lightGray
     }
     /*
     func textField(_ billAmountTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
