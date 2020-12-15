@@ -110,24 +110,19 @@ class ViewController: UIViewController{
     }
     
     @IBAction func partySize(_ sender: Any) {
+        let total = Double(totalLabel.text!) ?? 0
+        var splitBill = 0.0
         //get the bill amount if not nil, else 0
         let bill = Double(billAmountTextField.text!) ?? 0
         //get the party size if not nil, else 0
         let partySize = Int(partyNumberTextField.text!) ?? 0
         let isPayingSeparately = [false, true]
         //if bill amount is not 0 and separte is selected
-        if bill != 0 &&
-            true == isPayingSeparately[partyControl.selectedSegmentIndex]{
+        if bill != 0 && true == isPayingSeparately[partyControl.selectedSegmentIndex]{
             partyOfLabel.isHidden = false
             partyNumberTextField.isHidden = false
             partyNumberTextField.backgroundColor = UIColor.white
             partyNumberTextField.isUserInteractionEnabled = true
-        }
-        else if false == isPayingSeparately[partyControl.selectedSegmentIndex] {
-            partyOfLabel.isHidden = true
-            partyNumberTextField.isHidden = true
-            partyNumberTextField.backgroundColor = UIColor.lightGray
-            partyNumberTextField.isUserInteractionEnabled = false
         }
         else {
             partyOfLabel.isHidden = true
@@ -146,6 +141,21 @@ class ViewController: UIViewController{
             splitAmountLabel.isHidden = false
             remainingLabel.isHidden = false
             remainingAmountLabel.isHidden = false
+            
+            splitBill = total / Double(partySize)
+            splitAmountLabel.text = String(format: "$%.2f", splitBill)
+        }
+        else {
+            paidButton.isHidden = true
+            paidButton.isUserInteractionEnabled = false
+            paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+            undoButton.isHidden = true
+            undoButton.isUserInteractionEnabled = false
+            undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+            splitBillLabel.isHidden = true
+            splitAmountLabel.isHidden = true
+            remainingLabel.isHidden = true
+            remainingAmountLabel.isHidden = true
         }
     }
 }
