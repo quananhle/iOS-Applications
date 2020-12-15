@@ -123,7 +123,7 @@ class ViewController: UIViewController{
             partyNumberTextField.backgroundColor = UIColor.white
             partyNumberTextField.isUserInteractionEnabled = true
         }
-        else if bill != 0 && false == isPayingSeparately[partyControl.selectedSegmentIndex] {
+        else if false == isPayingSeparately[partyControl.selectedSegmentIndex] {
             partyOfLabel.isHidden = true
             partyNumberTextField.isHidden = true
             partyNumberTextField.backgroundColor = UIColor.lightGray
