@@ -28,7 +28,10 @@ class ViewController: UIViewController{
     @IBOutlet weak var remainingLabel: UILabel!
     @IBOutlet weak var remainingAmountLabel: UILabel!
     
-    
+    var bill = 0.0, sliderTip = 0.0,
+    tipAmount = 0.0, tipPercentage = 0.0, total = 0.0, partySize = 0
+    let tipPercentages = [0.15, 0.18, 0.2, 0.0]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -88,50 +91,43 @@ class ViewController: UIViewController{
     
     @IBAction func calculateTip(_ sender: Any) {
         //get initial bill amount and calculate tips
-        var tipAmount = 0.0, tipPercentage = 0.0
-        let sliderTip = Double(tipCustomSlider.value)
-        let bill = Double(billAmountTextField.text!) ?? 0
-        let partySize = Double(partyNumberTextField.text!) ?? 0
-        let tipPercentages = [0.15, 0.18, 0.2, 0.0]
+        sliderTip = Double(tipCustomSlider.value)
+        bill = Double(billAmountTextField.text!) ?? 0
         if tipControl.selectedSegmentIndex == 3 {
+            tipCustomSlider.isHidden = false
             tipPercentage = sliderTip / 100
             tipAmount = bill * tipPercentage
         }
         else {
             tipCustomSlider.value = 0
+            tipCustomSlider.isHidden = true
             tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
             tipAmount = bill * tipPercentage
         }
         //calculate tip and total
-        let total = bill + tipAmount
-        let splitBill = total / partySize
+        total = bill + tipAmount
         //update the tip and total labels
         tipAmountLabel.text = String(format: "$%.2f", tipAmount)
         tipPercentageLabel.text = String(format: "%.2f", tipPercentage * 100) + "%"
         totalLabel.text = String(format: "$%.2f", total)
-        splitAmountLabel.text = String(format: "$%.2f", splitBill)
     }
     
     @IBAction func partySize(_ sender: Any) {
-        //get the bill amount if not nil, else 0
-        let bill = Double(billAmountTextField.text!) ?? 0
         //get the party size if not nil, else 0
-        let partySize = Int(partyNumberTextField.text!) ?? 0
+        partySize = Int(partyNumberTextField.text!) ?? 0
+        let splitBill = total / Double(partySize)
         let isPayingSeparately = [false, true]
         //if bill amount is not 0 and separte is selected
-        if bill != 0 && true == isPayingSeparately[partyControl.selectedSegmentIndex]{
-            partyOfLabel.isHidden = false
-            partyNumberTextField.isHidden = false
+        if true == isPayingSeparately[partyControl.selectedSegmentIndex]{
             partyNumberTextField.backgroundColor = UIColor.white
             partyNumberTextField.isUserInteractionEnabled = true
         }
         else {
-            partyOfLabel.isHidden = true
-            partyNumberTextField.isHidden = true
             partyNumberTextField.backgroundColor = UIColor.lightGray
+            partyNumberTextField.text = ""
             partyNumberTextField.isUserInteractionEnabled = false
         }
-        if partySize != 0 {
+        if partySize != 0 && true == isPayingSeparately[partyControl.selectedSegmentIndex]{
             paidButton.isHidden = false
             paidButton.isUserInteractionEnabled = true
             paidButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
@@ -142,6 +138,8 @@ class ViewController: UIViewController{
             splitAmountLabel.isHidden = false
             remainingLabel.isHidden = false
             remainingAmountLabel.isHidden = false
+            
+            splitAmountLabel.text = String(format: "$%.2f", splitBill) + "/pax"
         }
         else {
             paidButton.isHidden = true
@@ -151,7 +149,7 @@ class ViewController: UIViewController{
             undoButton.isUserInteractionEnabled = false
             undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
             splitBillLabel.isHidden = true
-            splitAmountLabel.isHidden = true
+//            splitAmountLabel.isHidden = true
             remainingLabel.isHidden = true
             remainingAmountLabel.isHidden = true
         }
