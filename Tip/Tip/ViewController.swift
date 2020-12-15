@@ -19,8 +19,10 @@ class ViewController: UIViewController{
     @IBOutlet weak var tipCustomSlider: UISlider!
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    @IBOutlet weak var splitLabel: UILabel!
     @IBOutlet weak var paidButton: UIButton!
+    @IBOutlet weak var undoButton: UIButton!
+    @IBOutlet weak var splitLabel: UILabel!
+    @IBOutlet weak var remainingLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class ViewController: UIViewController{
 //        billAmountTextField.delegate = self
         partyNumberTextField.isUserInteractionEnabled = false
         partyNumberTextField.backgroundColor = UIColor.lightGray
+        paidButton.isUserInteractionEnabled = false
+        undoButton.isUserInteractionEnabled = false
     }
     /*
     func textField(_ billAmountTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -117,7 +121,7 @@ class ViewController: UIViewController{
         }
     }
 }
-
+//make rounded border button
 @IBDesignable extension UIButton {
     @IBInspectable var borderWidth: CGFloat {
         set {
