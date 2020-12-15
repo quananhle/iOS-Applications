@@ -130,15 +130,22 @@ class ViewController: UIViewController{
             partyNumberTextField.isUserInteractionEnabled = false
         }
         else {
+            partyOfLabel.isHidden = true
+            partyNumberTextField.isHidden = true
             partyNumberTextField.backgroundColor = UIColor.lightGray
             partyNumberTextField.isUserInteractionEnabled = false
         }
         if partySize != 0 {
+            paidButton.isHidden = false
             paidButton.isUserInteractionEnabled = true
             paidButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            undoButton.isHidden = false
             undoButton.isUserInteractionEnabled = true
             undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            
+            splitBillLabel.isHidden = false
+            splitAmountLabel.isHidden = false
+            remainingLabel.isHidden = false
+            remainingAmountLabel.isHidden = false
         }
     }
 }
