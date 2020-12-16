@@ -109,8 +109,6 @@ class ViewController: UIViewController{
         }
         //calculate tip and total
         total = bill + tipAmount
-        tmpPaidButton = total
-        tmpUndoButton = total
         //update the tip and total labels
         tipAmountLabel.text = String(format: "$%.2f", tipAmount)
         tipPercentageLabel.text = String(format: "%.2f", tipPercentage * 100) + "%"
@@ -164,6 +162,10 @@ class ViewController: UIViewController{
         }
     }
     @IBAction func paidButton(_ sender: UIButton) {
+        //set tmpPaidButton once at start and not be reassigned
+        if 0.0 == tmpPaidButton{
+            tmpPaidButton = total
+        }
         remainingAmount = tmpPaidButton - splitBill
         remainingAmountLabel.text = String(format: "$%.2f", remainingAmount)
         tmpPaidButton = remainingAmount
