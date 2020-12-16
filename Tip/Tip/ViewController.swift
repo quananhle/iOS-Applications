@@ -153,6 +153,7 @@ class ViewController: UIViewController{
             remainingAmountLabel.isHidden = false
             totalTipLabel.isHidden = false
             totalTipAmount.isHidden = false
+            
             splitAmountLabel.text = String(format: "$%.2f", splitBill) + "/pax"
         }
         else {
