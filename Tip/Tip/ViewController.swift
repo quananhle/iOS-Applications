@@ -28,9 +28,11 @@ class ViewController: UIViewController{
     @IBOutlet weak var remainingLabel: UILabel!
     @IBOutlet weak var remainingAmountLabel: UILabel!
     
-    var bill = 0.0, sliderTip = 0.0,
-    tipAmount = 0.0, tipPercentage = 0.0, total = 0.0, splitBill = 0.0
+    var bill = 0.0, sliderTip = 0.0, tipAmount = 0.0,
+    tipPercentage = 0.0, total = 0.0, splitBill = 0.0,
+    remainingAmount = 0.0
     var partySize = 0.0
+    var tmpPaidButton = 0.0, tmpUndoButton = 0.0
     let tipPercentages = [0.15, 0.18, 0.2, 0.0]
 
     override func viewDidLoad() {
@@ -107,6 +109,8 @@ class ViewController: UIViewController{
         }
         //calculate tip and total
         total = bill + tipAmount
+        tmpPaidButton = total
+        tmpUndoButton = total
         //update the tip and total labels
         tipAmountLabel.text = String(format: "$%.2f", tipAmount)
         tipPercentageLabel.text = String(format: "%.2f", tipPercentage * 100) + "%"
@@ -142,8 +146,6 @@ class ViewController: UIViewController{
             paidButton.isUserInteractionEnabled = true
             paidButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
             undoButton.isHidden = false
-            undoButton.isUserInteractionEnabled = true
-            undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
             splitBillLabel.isHidden = false
             splitAmountLabel.isHidden = false
             remainingLabel.isHidden = false
@@ -152,8 +154,6 @@ class ViewController: UIViewController{
         }
         else {
             paidButton.isHidden = true
-            paidButton.isUserInteractionEnabled = false
-            paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
             undoButton.isHidden = true
             undoButton.isUserInteractionEnabled = false
             undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
@@ -163,6 +163,39 @@ class ViewController: UIViewController{
             remainingAmountLabel.isHidden = true
         }
     }
+    @IBAction func paidButton(_ sender: UIButton) {
+        remainingAmount = tmpPaidButton - splitBill
+        remainingAmountLabel.text = String(format: "$%.2f", remainingAmount)
+        tmpPaidButton = remainingAmount
+        if tmpPaidButton <= 0 {
+            paidButton.isUserInteractionEnabled = false
+            paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+        }
+        
+//        let tmp = total
+//        if 0 <= tmp - splitBill {
+//
+//            let tmp =
+//        }
+    }
+    @IBAction func undoButton(_ sender: UIButton) {
+        
+        if remainingAmount == total {
+            undoButton.isUserInteractionEnabled = false
+            undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+        }
+        else {
+            undoButton.isUserInteractionEnabled = true
+            undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        }
+
+//        remainingAmount = total - splitBill
+//        remainingAmountLabel.text = String(format: "$%.2f", remainingAmount)
+//        if 0 <= remainingAmount - splitBill {
+//            total = remainingAmount
+//        }
+    }
+    
 }
 //make rounded border button
 @IBDesignable extension UIButton {
