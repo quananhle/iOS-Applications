@@ -180,7 +180,7 @@ class ViewController: UIViewController{
 //            tmpPaidButton = total
 //        }
         if 0.0 == remainingAmount{
-            remainingAmount = total
+            remainingAmount = bill * tipAmount
         }
 //        remainingAmount = tmpPaidButton - splitBill
         remainingAmount = remainingAmount - splitBill
