@@ -206,7 +206,6 @@ class ViewController: UIViewController{
         else {
             remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " ppl"
         }
-//        tmpPaidButton = remainingAmount
         if remainingAmount <= 0 {
             paidButton.isUserInteractionEnabled = false
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
