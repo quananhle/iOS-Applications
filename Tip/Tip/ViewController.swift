@@ -204,6 +204,7 @@ class ViewController: UIViewController{
             }
             totalTip += tipAmount / Double(cnt)
         }
+        totalTipAmount.text = String(format: "$%.2f", totalTip)
         if 2 >= cnt {
             remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " pax"
         }
