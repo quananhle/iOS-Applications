@@ -176,14 +176,30 @@ class ViewController: UIViewController{
             cnt = numberPeople
         }
         //set tmpPaidButton once at start and not be reassigned
-//        if 0.0 == tmpPaidButton{
-//            tmpPaidButton = total
-//        }
         if 0.0 == remainingAmount{
-            remainingAmount = bill * tipAmount
+            remainingAmount = bill
         }
-//        remainingAmount = tmpPaidButton - splitBill
-        remainingAmount = remainingAmount - splitBill
+        //for the first person paying the bill with tip
+        if cnt == numberPeople {
+            //remaining amount based on the tip amount decided by the first paying person
+            remainingAmount = remainingAmount + tipAmount
+            //first payment
+            remainingAmount = remainingAmount - splitBill
+        }
+        //for the rest of the group
+        else {
+            //if the next person changes the tip amount
+            if remainingAmount != (splitBill * Double(cnt)) {
+                //new remaining amount is recalculated based on the new tip amount
+                remainingAmount = splitBill * Double(cnt)
+                //recalculate remaining amount after each payment
+                remainingAmount = remainingAmount - splitBill
+            }
+            //otherwise, if the next person keep the same tip amount
+            else {
+                remainingAmount = remainingAmount - splitBill
+            }
+        }
         if 2 >= cnt {
             remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " pax"
         }
