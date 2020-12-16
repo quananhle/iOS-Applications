@@ -34,6 +34,7 @@ class ViewController: UIViewController{
     var partySize = 0.0
     var tmpPaidButton = 0.0, tmpUndoButton = 0.0
     let tipPercentages = [0.15, 0.18, 0.2, 0.0]
+    var cnt = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -162,17 +163,26 @@ class ViewController: UIViewController{
         }
     }
     @IBAction func paidButton(_ sender: UIButton) {
+        let numberPeople = Int(partyNumberTextField.text!) ?? 0
+        //set variable cnt is partySize once at start and not be reassigned
+        if 0 == cnt {
+            cnt = numberPeople
+        }
         //set tmpPaidButton once at start and not be reassigned
         if 0.0 == tmpPaidButton{
             tmpPaidButton = total
         }
         remainingAmount = tmpPaidButton - splitBill
-        remainingAmountLabel.text = String(format: "$%.2f", remainingAmount)
+        remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " ppl"
+        if 1 == cnt {
+            remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " pax"
+        }
         tmpPaidButton = remainingAmount
         if tmpPaidButton <= 0 {
             paidButton.isUserInteractionEnabled = false
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
+        cnt -= 1
         
 //        let tmp = total
 //        if 0 <= tmp - splitBill {
