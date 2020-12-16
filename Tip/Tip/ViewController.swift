@@ -202,7 +202,7 @@ class ViewController: UIViewController{
                 remainingAmount -= splitBill
                 
             }
-            totalTip += tipAmount / Double(cnt)
+            totalTip += (tipAmount - totalTip) / Double(cnt)
         }
         totalTipAmount.text = String(format: "$%.2f", totalTip)
         if 2 >= cnt {
