@@ -190,9 +190,9 @@ class ViewController: UIViewController{
         //for the rest of the group
         else {
             //if the next person changes the tip amount
-            if remainingAmount != (splitBill * partySize) {
+            if remainingAmount != (splitBill * Double(cnt)) {
                 //new remaining amount is recalculated based on the new tip amount
-                remainingAmount = splitBill * partySize
+                remainingAmount = splitBill * Double(cnt)
                 //recalculate remaining amount after each payment
                 remainingAmount = remainingAmount - splitBill
                 //add up the tip paid by the next person to total tip amount
