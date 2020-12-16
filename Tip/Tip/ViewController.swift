@@ -215,7 +215,7 @@ class ViewController: UIViewController{
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
         cnt -= 1
-        totalTipAmount.text = String(format: "$%.2f", )
+        totalTipAmount.text = String(format: "$%.2f", tipAmount)
     }
     @IBAction func undoButton(_ sender: UIButton) {
         
