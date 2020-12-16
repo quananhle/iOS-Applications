@@ -175,7 +175,7 @@ class ViewController: UIViewController{
         if 0 == cnt {
             cnt = numberPeople
         }
-        //set tmpPaidButton once at start and not be reassigned
+        //set remainingAmount once at start and not be reassigned
         if 0.0 == remainingAmount{
             remainingAmount = bill
         }
@@ -189,9 +189,9 @@ class ViewController: UIViewController{
         //for the rest of the group
         else {
             //if the next person changes the tip amount
-            if remainingAmount != (splitBill * Double(cnt)) {
+            if remainingAmount != (splitBill * partySize) {
                 //new remaining amount is recalculated based on the new tip amount
-                remainingAmount = splitBill * Double(cnt)
+                remainingAmount = splitBill * partySize
                 //recalculate remaining amount after each payment
                 remainingAmount = remainingAmount - splitBill
             }
