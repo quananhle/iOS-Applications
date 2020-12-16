@@ -196,12 +196,13 @@ class ViewController: UIViewController{
                 //recalculate remaining amount after each payment
                 remainingAmount = remainingAmount - splitBill
                 //add up the tip paid by the next person to total tip amount
-                totalTip += 
             }
             //otherwise, if the next person keep the same tip amount
             else {
                 remainingAmount = remainingAmount - splitBill
+                
             }
+            totalTip += tipAmount / Double(cnt)
         }
         if 2 >= cnt {
             remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " pax"
