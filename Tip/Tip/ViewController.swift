@@ -27,6 +27,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var splitAmountLabel: UILabel!
     @IBOutlet weak var remainingLabel: UILabel!
     @IBOutlet weak var remainingAmountLabel: UILabel!
+    @IBOutlet weak var totalTipLabel: UILabel!
+    @IBOutlet weak var totalTipAmount: UILabel!
     
     var bill = 0.0, sliderTip = 0.0, tipAmount = 0.0,
     tipPercentage = 0.0, total = 0.0, splitBill = 0.0,
@@ -149,6 +151,8 @@ class ViewController: UIViewController{
             splitAmountLabel.isHidden = false
             remainingLabel.isHidden = false
             remainingAmountLabel.isHidden = false
+            totalTipLabel.isHidden = false
+            totalTipAmount.isHidden = false
             splitAmountLabel.text = String(format: "$%.2f", splitBill) + "/pax"
         }
         else {
@@ -160,6 +164,8 @@ class ViewController: UIViewController{
             splitAmountLabel.isHidden = true
             remainingLabel.isHidden = true
             remainingAmountLabel.isHidden = true
+            totalTipLabel.isHidden = true
+            totalTipAmount.isHidden = true
         }
     }
     @IBAction func paidButton(_ sender: UIButton) {
@@ -169,26 +175,27 @@ class ViewController: UIViewController{
             cnt = numberPeople
         }
         //set tmpPaidButton once at start and not be reassigned
-        if 0.0 == tmpPaidButton{
-            tmpPaidButton = total
+//        if 0.0 == tmpPaidButton{
+//            tmpPaidButton = total
+//        }
+        if 0.0 == remainingAmount{
+            remainingAmount = total
         }
-        remainingAmount = tmpPaidButton - splitBill
-        remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " ppl"
-        if 1 == cnt {
+//        remainingAmount = tmpPaidButton - splitBill
+        remainingAmount = remainingAmount - splitBill
+        if 2 >= cnt {
             remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " pax"
         }
-        tmpPaidButton = remainingAmount
-        if tmpPaidButton <= 0 {
+        else {
+            remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " ppl"
+        }
+//        tmpPaidButton = remainingAmount
+        if remainingAmount <= 0 {
             paidButton.isUserInteractionEnabled = false
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
         cnt -= 1
-        
-//        let tmp = total
-//        if 0 <= tmp - splitBill {
-//
-//            let tmp =
-//        }
+
     }
     @IBAction func undoButton(_ sender: UIButton) {
         
