@@ -232,6 +232,7 @@ class ViewController: UIViewController{
         }
         cnt -= 1
         tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
+        totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
 
     }
