@@ -117,8 +117,8 @@ class ViewController: UIViewController{
         //calculate tip for paying separately
         splitBill = total / partySize
         tipAmountSeparate = splitBill - (bill / partySize)
-        //====== placebo =======//
-        if tipAmountSeparate == Double.nan {
+        //FIXME: fix tipAmountSeparte return nan when first enter party size
+        if tipAmountSeparate.isNaN {
             tipAmountSeparateLabel.text = String("$0.00")
             tipCustomSlider.isHidden = false
             tipCustomSlider.value = 0
@@ -178,7 +178,7 @@ class ViewController: UIViewController{
             splitAmountLabel.text = String(format: "$%.2f", splitBill) + "/pax"
         }
         else {
-            totalPaidLabel.isHidden = false
+            totalPaidLabel.isHidden = true
             paidButton.isHidden = true
             undoButton.isHidden = true
             undoButton.isUserInteractionEnabled = false
