@@ -112,7 +112,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="rHh-ML-AW6"/>
                                     <action selector="partySize:" destination="BYZ-38-t0r" eventType="editingChanged" id="l8t-tG-XIf"/>
                                 </connections>
                             </textField>
