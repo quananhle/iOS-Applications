@@ -16,6 +16,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var partyOfLabel: UILabel!
     @IBOutlet weak var partyNumberTextField: UITextField!
     @IBOutlet weak var tipPercentageLabel: UILabel!
+    @IBOutlet weak var tipPercentageSeparateLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var tipCustomSlider: UISlider!
     @IBOutlet weak var tipAmountLabel: UILabel!
@@ -118,11 +119,9 @@ class ViewController: UIViewController{
         splitBill = total / partySize
         tipAmountSeparate = splitBill - (bill / partySize)
         //FIXME: fix tipAmountSeparte return nan when first enter party size
-        if tipAmountSeparate.isNaN {
+        if !tipAmountSeparateLabel.isHidden && tipAmountSeparate.isNaN {
             tipAmountSeparateLabel.text = String("$0.00")
-            tipCustomSlider.isHidden = false
-            tipCustomSlider.value = 0
-            tipPercentage = 0
+            tipControl.selectedSegmentIndex = 3
         }
         else{
             tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
