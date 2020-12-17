@@ -97,6 +97,8 @@ class ViewController: UIViewController{
     }
     
     @IBAction func calculateTip(_ sender: Any) {
+        let cnt = Int(partyNumberTextField.text!) ?? 0
+        partySize = Double(partyNumberTextField.text!) ?? 0.0
         //get initial bill amount and calculate tips
         sliderTip = Double(tipCustomSlider.value)
         bill = Double(billAmountTextField.text!) ?? 0
@@ -114,7 +116,9 @@ class ViewController: UIViewController{
         //calculate tip and total
         total = bill + tipAmount
         //calculate tip for paying separately
-        partySize = Double(partyNumberTextField.text!) ?? 0.0
+        if partySize == Double(cnt){
+            tipAmountSeparate = bill / partySize * tipPercentage
+        }
         splitBill = total / partySize
         tipAmountSeparate = splitBill - (bill / partySize)
         tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
