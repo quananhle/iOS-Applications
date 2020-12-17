@@ -183,7 +183,7 @@ class ViewController: UIViewController{
             remainingAmountLabel.isHidden = true
             totalTipLabel.isHidden = true
             totalTipAmount.isHidden = true
-            
+
             tipAmountLabel.isHidden = false
             totalLabel.isHidden = false
             tipAmountSeparateLabel.isHidden = true
