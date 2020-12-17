@@ -195,7 +195,7 @@ class ViewController: UIViewController{
         }
         //for the first person paying the bill with tip
         if cnt == numberPeople {
-            
+            tipAmountSeparate = splitBill - (bill / partySize)
             //remaining amount based on the tip amount decided by the first paying person, presume that all people in the party pay the same tip percentage
             remainingAmount += tipAmount
             //first payment
