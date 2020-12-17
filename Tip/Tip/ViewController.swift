@@ -195,7 +195,6 @@ class ViewController: UIViewController{
         }
         //for the first person paying the bill with tip
         if cnt == numberPeople {
-            tipAmountSeparate = splitBill - (bill / partySize)
             //remaining amount based on the tip amount decided by the first paying person, presume that all people in the party pay the same tip percentage
             remainingAmount += tipAmount
             //first payment
@@ -219,7 +218,8 @@ class ViewController: UIViewController{
             //add up the tip paid by the next person to total tip amount
             totalTip += splitBill - (bill / partySize)
         }
-        totalTipAmount.text = String(format: "$%.2f", totalTip)
+        totalPaidSeperate += splitBill
+        tipAmountSeparate = splitBill - (bill / partySize)
         if 2 >= cnt {
             remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " pax"
         }
@@ -231,6 +231,9 @@ class ViewController: UIViewController{
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
         cnt -= 1
+        tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
+        totalTipAmount.text = String(format: "$%.2f", totalTip)
+
     }
     @IBAction func undoButton(_ sender: UIButton) {
         
