@@ -57,7 +57,6 @@ class ViewController: UIViewController{
         if ((string == "0" || string == "") && (billAmountTextField.text! as NSString).range(of: ".").location < range.location) {
             return true
         }
-
         // First check whether the replacement string's numeric...
         let cs = NSCharacterSet(charactersIn: "0123456789.").inverted
         let filtered = string.components(separatedBy: cs)
