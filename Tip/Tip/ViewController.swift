@@ -36,7 +36,7 @@ class ViewController: UIViewController{
     var bill = 0.0, sliderTip = 0.0, tipAmount = 0.0,
     tipPercentage = 0.0, total = 0.0, splitBill = 0.0,
     remainingAmount = 0.0, partySize = 0.0, totalTip = 0.0
-    var tmpPaidButton = 0.0, tmpUndoButton = 0.0
+    var tipAmountSeparate = 0.0, totalPaidSeperate = 0.0
     let tipPercentages = [0.15, 0.18, 0.2, 0.0]
     var cnt = 0
 
@@ -145,7 +145,7 @@ class ViewController: UIViewController{
             partyNumberTextField.isUserInteractionEnabled = false
         }
         if partySize != 0 && true == isPayingSeparately[partyControl.selectedSegmentIndex]{
-            totalSeparateLabel.isHidden = false
+            totalPaidLabel.isHidden = false
             paidButton.isHidden = false
             paidButton.isUserInteractionEnabled = true
             paidButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
@@ -195,6 +195,7 @@ class ViewController: UIViewController{
         }
         //for the first person paying the bill with tip
         if cnt == numberPeople {
+            
             //remaining amount based on the tip amount decided by the first paying person, presume that all people in the party pay the same tip percentage
             remainingAmount += tipAmount
             //first payment
