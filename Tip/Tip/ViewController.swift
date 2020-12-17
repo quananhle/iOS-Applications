@@ -132,6 +132,7 @@ class ViewController: UIViewController{
     @IBAction func partySize(_ sender: Any) {
         partySize = Double(partyNumberTextField.text!) ?? 0.0
         splitBill = total / partySize
+        tipAmountSeparate = splitBill - (bill / partySize)
         //get the party size if not nil, else 0
         let isPayingSeparately = [false, true]
         //if bill amount is not 0 and separte is selected
@@ -162,6 +163,7 @@ class ViewController: UIViewController{
             tipAmountSeparateLabel.isHidden = false
             totalSeparateLabel.isHidden = false
             
+            tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
             splitAmountLabel.text = String(format: "$%.2f", splitBill) + "/pax"
         }
         else {
@@ -219,7 +221,6 @@ class ViewController: UIViewController{
             totalTip += splitBill - (bill / partySize)
         }
         totalPaidSeperate += splitBill
-        tipAmountSeparate = splitBill - (bill / partySize)
         if 2 >= cnt {
             remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " pax"
         }
@@ -231,7 +232,6 @@ class ViewController: UIViewController{
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
         cnt -= 1
-        tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
 
