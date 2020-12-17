@@ -114,11 +114,13 @@ class ViewController: UIViewController{
         }
         //calculate tip and total
         total = bill + tipAmount
+        //calculate tip for paying separately
+        tipAmountSeparate = splitBill - (bill / partySize)
         //update the tip and total labels
         tipAmountLabel.text = String(format: "$%.2f", tipAmount)
+        tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
         tipPercentageLabel.text = String(format: "%.2f", tipPercentage * 100) + "%"
         totalLabel.text = String(format: "$%.2f", total)
-        
         partySize = Double(partyNumberTextField.text!) ?? 0.0
         splitBill = total / partySize
         if partySize != 0.0{
@@ -132,7 +134,6 @@ class ViewController: UIViewController{
     @IBAction func partySize(_ sender: Any) {
         partySize = Double(partyNumberTextField.text!) ?? 0.0
         splitBill = total / partySize
-        tipAmountSeparate = splitBill - (bill / partySize)
         //get the party size if not nil, else 0
         let isPayingSeparately = [false, true]
         //if bill amount is not 0 and separte is selected
@@ -163,7 +164,6 @@ class ViewController: UIViewController{
             tipAmountSeparateLabel.isHidden = false
             totalSeparateLabel.isHidden = false
             
-            tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
             splitAmountLabel.text = String(format: "$%.2f", splitBill) + "/pax"
         }
         else {
