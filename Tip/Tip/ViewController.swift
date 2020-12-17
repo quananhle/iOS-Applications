@@ -97,7 +97,6 @@ class ViewController: UIViewController{
     }
     
     @IBAction func calculateTip(_ sender: Any) {
-        let cnt = Int(partyNumberTextField.text!) ?? 0
         partySize = Double(partyNumberTextField.text!) ?? 0.0
         //get initial bill amount and calculate tips
         sliderTip = Double(tipCustomSlider.value)
@@ -116,12 +115,19 @@ class ViewController: UIViewController{
         //calculate tip and total
         total = bill + tipAmount
         //calculate tip for paying separately
-        if partySize == Double(cnt){
-            tipAmountSeparate = bill / partySize * tipPercentage
-        }
         splitBill = total / partySize
         tipAmountSeparate = splitBill - (bill / partySize)
-        tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
+        //====== placebo =======//
+        if tipAmountSeparate == Double.nan {
+            tipAmountSeparateLabel.text = String("$0.00")
+            tipCustomSlider.isHidden = false
+            tipCustomSlider.value = 0
+            tipPercentage = 0
+        }
+        else{
+            tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
+        }
+        //======================//
         //update the tip and total labels
         tipAmountLabel.text = String(format: "$%.2f", tipAmount)
         tipPercentageLabel.text = String(format: "%.2f", tipPercentage * 100) + "%"
@@ -172,7 +178,7 @@ class ViewController: UIViewController{
             splitAmountLabel.text = String(format: "$%.2f", splitBill) + "/pax"
         }
         else {
-            totalSeparateLabel.isHidden = true
+            totalPaidLabel.isHidden = false
             paidButton.isHidden = true
             undoButton.isHidden = true
             undoButton.isUserInteractionEnabled = false
