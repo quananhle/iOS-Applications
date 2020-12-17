@@ -185,7 +185,7 @@ class ViewController: UIViewController{
             //first payment
             remainingAmount -= splitBill
             //add up the tip amount paid by the first person to total tip amount
-            totalTip += tipAmount / partySize
+            totalTip += splitBill - (bill / partySize)
         }
         //for the rest of the group
         else {
@@ -195,14 +195,13 @@ class ViewController: UIViewController{
                 remainingAmount = splitBill * Double(cnt)
                 //recalculate remaining amount after each payment
                 remainingAmount -= splitBill
-                //add up the tip paid by the next person to total tip amount
             }
             //otherwise, if the next person keep the same tip amount
             else {
                 remainingAmount -= splitBill
-                
             }
-            totalTip += (tipAmount - totalTip) / Double(cnt)
+            //add up the tip paid by the next person to total tip amount
+            totalTip += splitBill - (bill / partySize)
         }
         totalTipAmount.text = String(format: "$%.2f", totalTip)
         if 2 >= cnt {
