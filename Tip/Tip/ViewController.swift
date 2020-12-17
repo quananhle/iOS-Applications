@@ -214,11 +214,6 @@ class ViewController: UIViewController{
             undoButton.isUserInteractionEnabled = true
             undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
         }
-//        remainingAmount = total - splitBill
-//        remainingAmountLabel.text = String(format: "$%.2f", remainingAmount)
-//        if 0 <= remainingAmount - splitBill {
-//            total = remainingAmount
-//        }
     }
 }
 //make rounded border button
