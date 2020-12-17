@@ -19,7 +19,10 @@ class ViewController: UIViewController{
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var tipCustomSlider: UISlider!
     @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var tipAmountSeparateLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var totalPaidLabel: UILabel!
+    @IBOutlet weak var totalSeparateLabel: UILabel!
     @IBOutlet weak var paidButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
     
@@ -142,6 +145,7 @@ class ViewController: UIViewController{
             partyNumberTextField.isUserInteractionEnabled = false
         }
         if partySize != 0 && true == isPayingSeparately[partyControl.selectedSegmentIndex]{
+            totalSeparateLabel.isHidden = false
             paidButton.isHidden = false
             paidButton.isUserInteractionEnabled = true
             paidButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
@@ -153,9 +157,15 @@ class ViewController: UIViewController{
             totalTipLabel.isHidden = false
             totalTipAmount.isHidden = false
             
+            tipAmountLabel.isHidden = true
+            totalLabel.isHidden = true
+            tipAmountSeparateLabel.isHidden = false
+            totalSeparateLabel.isHidden = false
+            
             splitAmountLabel.text = String(format: "$%.2f", splitBill) + "/pax"
         }
         else {
+            totalSeparateLabel.isHidden = true
             paidButton.isHidden = true
             undoButton.isHidden = true
             undoButton.isUserInteractionEnabled = false
@@ -166,6 +176,11 @@ class ViewController: UIViewController{
             remainingAmountLabel.isHidden = true
             totalTipLabel.isHidden = true
             totalTipAmount.isHidden = true
+            
+            tipAmountLabel.isHidden = false
+            totalLabel.isHidden = false
+            tipAmountSeparateLabel.isHidden = true
+            totalSeparateLabel.isHidden = true
         }
     }
     @IBAction func paidButton(_ sender: UIButton) {

@@ -210,6 +210,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVH-YN-7uI">
+                                <rect key="frame" x="202" y="343" width="167" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKF-3e-ryD">
+                                <rect key="frame" x="202" y="392" width="167" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Paid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33M-2V-CBU">
+                                <rect key="frame" x="62" y="391" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -230,10 +251,13 @@
                         <outlet property="splitAmountLabel" destination="HND-BS-vaf" id="cW9-6O-Tlw"/>
                         <outlet property="splitBillLabel" destination="1QO-C7-lF1" id="Vt9-wP-DV4"/>
                         <outlet property="tipAmountLabel" destination="Q3H-Oz-nD3" id="saX-ZS-21B"/>
+                        <outlet property="tipAmountSeparateLabel" destination="zVH-YN-7uI" id="AuF-Xi-gpJ"/>
                         <outlet property="tipControl" destination="NBE-8C-dmY" id="P7r-NS-64M"/>
                         <outlet property="tipCustomSlider" destination="OfH-Ak-ttp" id="2oo-1f-mnH"/>
                         <outlet property="tipPercentageLabel" destination="9kx-fa-yHE" id="teL-Ds-CNd"/>
                         <outlet property="totalLabel" destination="78n-3S-IoJ" id="1UR-8i-LAP"/>
+                        <outlet property="totalPaidLabel" destination="33M-2V-CBU" id="C2q-Nu-Bsz"/>
+                        <outlet property="totalSeparateLabel" destination="gKF-3e-ryD" id="Oev-By-mxB"/>
                         <outlet property="totalTipAmount" destination="RPZ-aT-U7g" id="WsU-iV-in9"/>
                         <outlet property="totalTipLabel" destination="03y-SD-Iva" id="YHd-aK-Wnv"/>
                         <outlet property="undoButton" destination="srZ-G0-3KB" id="7ZE-EF-Cn0"/>
