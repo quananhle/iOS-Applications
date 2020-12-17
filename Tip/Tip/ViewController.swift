@@ -114,13 +114,11 @@ class ViewController: UIViewController{
         }
         //calculate tip and total
         total = bill + tipAmount
-        
         //calculate tip for paying separately
         partySize = Double(partyNumberTextField.text!) ?? 0.0
         splitBill = total / partySize
         tipAmountSeparate = splitBill - (bill / partySize)
         tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
-        
         //update the tip and total labels
         tipAmountLabel.text = String(format: "$%.2f", tipAmount)
         tipPercentageLabel.text = String(format: "%.2f", tipPercentage * 100) + "%"
