@@ -46,8 +46,8 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view.
         self.title = "Tip Calculator"
         billAmountTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
-        partyNumberTextField.isUserInteractionEnabled = false
-        partyNumberTextField.backgroundColor = UIColor(red: 220.0/255.0, green: 220.0/255.0, blue: 220.0/255.0, alpha: 1.0)
+//        partyNumberTextField.isUserInteractionEnabled = false
+        partyNumberTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
         paidButton.isUserInteractionEnabled = false
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         undoButton.isUserInteractionEnabled = false
@@ -228,7 +228,7 @@ class ViewController: UIViewController{
         tipCustomSlider.value = 0
         splitBill = 0.0
         tipPercentage = 0.0
-        tipPercentageLabel.text = String(format: "$%.2f", tipPercentage)
+        tipPercentageLabel.text = String(format: "%.2f", tipPercentage) + "%"
         tipAmountSeparate = 0.0
         tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
         totalPaidSeperate = 0.0
