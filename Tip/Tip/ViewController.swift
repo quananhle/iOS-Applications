@@ -151,10 +151,6 @@ class ViewController: UIViewController{
             tipAmountSeparateLabel.isHidden = true
             totalSeparateLabel.isHidden = true
         }
-        if totalPaidSeperate != 0 || totalTip != 0 {
-            clearButton.isUserInteractionEnabled = true
-            clearButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        }
     }
     @IBAction func paidButton(_ sender: UIButton) {
         let numberPeople = Int(partyNumberTextField.text!) ?? 0
@@ -203,6 +199,10 @@ class ViewController: UIViewController{
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
         cnt -= 1
+        if totalPaidSeperate != 0 || totalTip != 0 {
+            clearButton.isUserInteractionEnabled = true
+            clearButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        }
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
@@ -211,8 +211,15 @@ class ViewController: UIViewController{
         partyNumberTextField.text = ""
         tipControl.selectedSegmentIndex = 3
         tipCustomSlider.value = 0
+        tipPercentage = 0.0
+        tipAmountSeparate = 0.0
         totalPaidSeperate = 0.0
+        splitBill = 0.0
+        remainingAmount = 0.0
         totalTip = 0.0
+        tipPercentageLabel.text = String(format: "$%.2f", tipPercentage )
+        totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
+        totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
 }
 //make rounded border button
