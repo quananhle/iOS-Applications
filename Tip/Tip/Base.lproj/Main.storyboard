@@ -243,7 +243,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="qVH-dk-DO1">
-                        <barButtonItem key="leftBarButtonItem" title="Clear" id="Dcq-eK-okC"/>
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="Dcq-eK-okC">
+                            <connections>
+                                <action selector="clearBarButton:" destination="BYZ-38-t0r" id="7Hk-Dj-Kpe"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="aA6-SP-wA6">
                             <connections>
                                 <segue destination="yNc-Qt-niu" kind="push" id="vDK-wd-IIr"/>
@@ -252,6 +256,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billAmountTextField" destination="m4l-79-NOY" id="ghe-R0-4kf"/>
+                        <outlet property="clearBarButton" destination="Dcq-eK-okC" id="yxJ-2Y-WgY"/>
                         <outlet property="clearButton" destination="srZ-G0-3KB" id="7ZE-EF-Cn0"/>
                         <outlet property="paidButton" destination="58a-wv-cTg" id="I2H-Ig-DR8"/>
                         <outlet property="partyControl" destination="hfL-en-TBq" id="oEl-Fd-L9u"/>

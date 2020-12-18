@@ -32,6 +32,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var totalTipLabel: UILabel!
     @IBOutlet weak var totalTipAmount: UILabel!
     
+    @IBOutlet weak var clearBarButton: UIBarButtonItem!
+    
     var bill = 0.0, sliderTip = 0.0, tipAmount = 0.0,
     tipPercentage = 0.0, total = 0.0, splitBill = 0.0,
     remainingAmount = 0.0, partySize = 0.0, totalTip = 0.0
@@ -206,6 +208,30 @@ class ViewController: UIViewController{
         }
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
+    }
+    @IBAction func clearBarButton(_ sender: Any) {
+        billAmountTextField.text = ""
+        bill = 0.0
+        partyNumberTextField.text = ""
+        partySize = 0.0
+        tipControl.selectedSegmentIndex = 3
+        tipCustomSlider.value = 0
+        splitBill = 0.0
+        tipPercentage = 0.0
+        tipPercentageLabel.text = String(format: "$%.2f", tipPercentage)
+        tipAmountSeparate = 0.0
+        tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
+        totalPaidSeperate = 0.0
+        totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
+        splitBill = 0.0
+        splitAmountLabel.text = String(format: "$%.2f", splitBill)
+        remainingAmount = 0.0
+        remainingAmountLabel.text = String(format: "$%.2f", remainingAmount)
+        totalTip = 0.0
+        totalTipAmount.text = String(format: "$%.2f", totalTip)
+        cnt = 0
+        paidButton.isUserInteractionEnabled = false
+        paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
     }
     @IBAction func clearButton(_ sender: UIButton) {
         billAmountTextField.text = ""
