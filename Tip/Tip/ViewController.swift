@@ -265,8 +265,10 @@ class ViewController: UIViewController{
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         undoButton.isUserInteractionEnabled = false
         undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
-        partyNumberTextField.isUserInteractionEnabled = true
-        partyNumberTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+        if partyControl.selectedSegmentIndex == 1{
+           partyNumberTextField.isUserInteractionEnabled = true
+            partyNumberTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+        }
     }
 }
 //make rounded border button
