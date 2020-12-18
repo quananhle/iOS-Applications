@@ -66,11 +66,15 @@ class ViewController: UIViewController{
         //get initial bill amount and calculate tips
         sliderTip = Double(tipCustomSlider.value)
         bill = Double(billAmountTextField.text!) ?? 0
+        //if 'Custom' is selected
         if tipControl.selectedSegmentIndex == 3 {
+            //show the slider
             tipCustomSlider.isHidden = false
+            //calculate the tip amount from slider's values
             tipPercentage = sliderTip / 100
             tipAmount = bill * tipPercentage
         }
+        //if other segments are selected
         else {
             tipCustomSlider.value = 0
             tipCustomSlider.isHidden = true
