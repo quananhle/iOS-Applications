@@ -121,10 +121,6 @@ class ViewController: UIViewController{
             paidButton.isUserInteractionEnabled = true
             paidButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
             clearButton.isHidden = false
-            if totalPaidSeperate != 0 || totalTip != 0 {
-                clearButton.isUserInteractionEnabled = true
-                clearButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            }
             splitBillLabel.isHidden = false
             splitAmountLabel.isHidden = false
             remainingLabel.isHidden = false
@@ -154,6 +150,10 @@ class ViewController: UIViewController{
             totalLabel.isHidden = false
             tipAmountSeparateLabel.isHidden = true
             totalSeparateLabel.isHidden = true
+        }
+        if totalPaidSeperate != 0 || totalTip != 0 {
+            clearButton.isUserInteractionEnabled = true
+            clearButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
         }
     }
     @IBAction func paidButton(_ sender: UIButton) {
