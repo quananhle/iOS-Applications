@@ -150,7 +150,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="paidButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WdN-ix-jWO"/>
+                                    <action selector="paidButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WdN-ix-jWO"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lws-JS-QAi">
@@ -180,7 +180,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="undoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="64J-ru-XEA"/>
+                                    <action selector="undoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1qY-Mc-7wL"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nh-uK-qcS">

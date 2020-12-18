@@ -161,7 +161,7 @@ class ViewController: UIViewController{
             totalSeparateLabel.isHidden = true
         }
     }
-    @IBAction func paidButton(_ sender: UIButton) {
+    @IBAction func paidButtonPressed(_ sender: UIButton) {
         let numberPeople = Int(partyNumberTextField.text!) ?? 0
         //set variable cnt is partySize once at start and not be reassigned
         if 0 == cnt {
@@ -217,10 +217,11 @@ class ViewController: UIViewController{
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
-    @IBAction func undoButton(_ sender: UIButton) {
+    @IBAction func undoButtonPressed(_ sender: UIButton) {
         if self.undoMngr.canUndo {
             self.undoMngr.undo()
         }
+        self.undoButton.isEnabled = self.undoMngr.canUndo
     }
     @IBAction func clearBarButton(_ sender: Any) {
         billAmountTextField.text = ""
