@@ -243,7 +243,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="qVH-dk-DO1">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="aA6-SP-wA6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="aA6-SP-wA6">
+                            <connections>
+                                <segue destination="yNc-Qt-niu" kind="push" id="vDK-wd-IIr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="billAmountTextField" destination="m4l-79-NOY" id="ghe-R0-4kf"/>
@@ -287,6 +291,7 @@
                         <viewLayoutGuide key="safeArea" id="Usd-GO-GoD"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Jec-n5-n6Q"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjE-NU-e7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
