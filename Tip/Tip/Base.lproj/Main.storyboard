@@ -243,6 +243,7 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="qVH-dk-DO1">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="Dcq-eK-okC"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="aA6-SP-wA6">
                             <connections>
                                 <segue destination="yNc-Qt-niu" kind="push" id="vDK-wd-IIr"/>
