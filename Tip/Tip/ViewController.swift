@@ -176,6 +176,8 @@ class ViewController: UIViewController{
         }
         //for the rest of the group
         else {
+            undoButton.isUserInteractionEnabled = true
+            undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
             //if the next person changes the tip amount
             if remainingAmount != (splitBill * Double(cnt)) {
                 //new remaining amount is recalculated based on the new tip amount
@@ -202,10 +204,6 @@ class ViewController: UIViewController{
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
         cnt -= 1
-        if totalPaidSeperate != 0 || totalTip != 0 {
-            undoButton.isUserInteractionEnabled = true
-            undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        }
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
