@@ -176,8 +176,6 @@ class ViewController: UIViewController{
         }
         //for the rest of the group
         else {
-            undoButton.isUserInteractionEnabled = true
-            undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
             //if the next person changes the tip amount
             if remainingAmount != (splitBill * Double(cnt)) {
                 //new remaining amount is recalculated based on the new tip amount
@@ -204,6 +202,12 @@ class ViewController: UIViewController{
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
         cnt -= 1
+        if cnt != numberPeople{
+            partyNumberTextField.isUserInteractionEnabled = false
+            partyNumberTextField.backgroundColor = UIColor(red: 220.0/255.0, green: 220.0/255.0, blue: 220.0/255.0, alpha: 1.0)
+            undoButton.isUserInteractionEnabled = true
+            undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        }
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
@@ -230,9 +234,12 @@ class ViewController: UIViewController{
         cnt = 0
         paidButton.isUserInteractionEnabled = false
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+        partyNumberTextField.isUserInteractionEnabled = true
+        partyNumberTextField.backgroundColor = UIColor(red: 220.0/255.0, green: 220.0/255.0, blue: 220.0/255.0, alpha: 1.0)
     }
     @IBAction func undoButton(_ sender: UIButton) {
-
+//        undoButton.isUserInteractionEnabled = true
+//        undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
     }
 }
 //make rounded border button
