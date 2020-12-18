@@ -23,7 +23,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var totalPaidLabel: UILabel!
     @IBOutlet weak var totalSeparateLabel: UILabel!
     @IBOutlet weak var paidButton: UIButton!
-    @IBOutlet weak var undoButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     
     @IBOutlet weak var splitBillLabel: UILabel!
     @IBOutlet weak var splitAmountLabel: UILabel!
@@ -46,8 +46,8 @@ class ViewController: UIViewController{
         partyNumberTextField.backgroundColor = UIColor.lightGray
         paidButton.isUserInteractionEnabled = false
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
-        undoButton.isUserInteractionEnabled = false
-        undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+        clearButton.isUserInteractionEnabled = false
+        clearButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -120,7 +120,11 @@ class ViewController: UIViewController{
             paidButton.isHidden = false
             paidButton.isUserInteractionEnabled = true
             paidButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            undoButton.isHidden = false
+            clearButton.isHidden = false
+            if totalPaidSeperate != 0 || totalTip != 0 {
+                clearButton.isUserInteractionEnabled = true
+                clearButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            }
             splitBillLabel.isHidden = false
             splitAmountLabel.isHidden = false
             remainingLabel.isHidden = false
@@ -137,9 +141,9 @@ class ViewController: UIViewController{
         else {
             totalPaidLabel.isHidden = true
             paidButton.isHidden = true
-            undoButton.isHidden = true
-            undoButton.isUserInteractionEnabled = false
-            undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+            clearButton.isHidden = true
+            clearButton.isUserInteractionEnabled = false
+            clearButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
             splitBillLabel.isHidden = true
             splitAmountLabel.isHidden = true
             remainingLabel.isHidden = true

@@ -245,6 +245,7 @@
                     <navigationItem key="navigationItem" id="qVH-dk-DO1"/>
                     <connections>
                         <outlet property="billAmountTextField" destination="m4l-79-NOY" id="ghe-R0-4kf"/>
+                        <outlet property="clearButton" destination="srZ-G0-3KB" id="7ZE-EF-Cn0"/>
                         <outlet property="paidButton" destination="58a-wv-cTg" id="I2H-Ig-DR8"/>
                         <outlet property="partyControl" destination="hfL-en-TBq" id="oEl-Fd-L9u"/>
                         <outlet property="partyNumberTextField" destination="7Zs-FD-TOc" id="kQZ-rZ-M5k"/>
@@ -262,7 +263,6 @@
                         <outlet property="totalSeparateLabel" destination="gKF-3e-ryD" id="Oev-By-mxB"/>
                         <outlet property="totalTipAmount" destination="RPZ-aT-U7g" id="WsU-iV-in9"/>
                         <outlet property="totalTipLabel" destination="03y-SD-Iva" id="YHd-aK-Wnv"/>
-                        <outlet property="undoButton" destination="srZ-G0-3KB" id="7ZE-EF-Cn0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
