@@ -242,6 +242,8 @@ class ViewController: UIViewController{
         billAmountTextField.text = ""
         bill = 0.0
         partyNumberTextField.text = ""
+        partyNumberTextField.isUserInteractionEnabled = false
+        partyNumberTextField.backgroundColor = UIColor(red: 47.0/255.0, green: 79.0/255.0, blue: 79.0/255.0, alpha: 1.0)
         partySize = 0.0
         tipControl.selectedSegmentIndex = 3
         tipCustomSlider.value = 0
