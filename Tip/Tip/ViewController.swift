@@ -39,7 +39,9 @@ class ViewController: UIViewController{
     remainingAmount = 0.0, partySize = 0.0, totalTip = 0.0
     var tipAmountSeparate = 0.0, totalPaidSeperate = 0.0
     let tipPercentages = [0.15, 0.18, 0.2, 0.0]
-    var cnt = 0
+    var paidCount = 0, undoCount = 0
+    
+    var result: [[Double]] = [[]]
     var undoMngr = UndoManager()
 
     override func viewDidLoad() {
@@ -47,8 +49,8 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view.
         self.title = "Tip Calculator"
         billAmountTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
-//        partyNumberTextField.isUserInteractionEnabled = false
-        partyNumberTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+        partyNumberTextField.isUserInteractionEnabled = false
+        partyNumberTextField.backgroundColor = UIColor(red: 47.0/255.0, green: 79.0/255.0, blue: 79.0/255.0, alpha: 1.0)
         paidButton.isUserInteractionEnabled = false
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         undoButton.isUserInteractionEnabled = false
@@ -87,7 +89,7 @@ class ViewController: UIViewController{
         //calculate tip for paying separately
         splitBill = total / partySize
         tipAmountSeparate = splitBill - (bill / partySize)
-        //FIXME: fix tipAmountSeparte return nan when first enter party size
+        // FIXME: fix tipAmountSeparte return nan when first enter party size
         if tipAmountSeparate.isNaN {
             tipAmountSeparateLabel.text = String("$0.00")
         }
@@ -120,7 +122,7 @@ class ViewController: UIViewController{
             partyNumberTextField.isUserInteractionEnabled = true
         }
         else {
-            partyNumberTextField.backgroundColor = UIColor(red: 220.0/255.0, green: 220.0/255.0, blue: 220.0/255.0, alpha: 1.0)
+            partyNumberTextField.backgroundColor = UIColor(red: 47.0/255.0, green: 79.0/255.0, blue: 79.0/255.0, alpha: 1.0)
             partyNumberTextField.text = ""
             partyNumberTextField.isUserInteractionEnabled = false
         }
@@ -162,17 +164,18 @@ class ViewController: UIViewController{
         }
     }
     @IBAction func paidButtonPressed(_ sender: UIButton) {
+        result.append([tipAmountSeparate, totalPaidSeperate, splitBill, remainingAmount, totalPaidSeperate])
         let numberPeople = Int(partyNumberTextField.text!) ?? 0
         //set variable cnt is partySize once at start and not be reassigned
-        if 0 == cnt {
-            cnt = numberPeople
+        if 0 == paidCount {
+            paidCount = numberPeople
         }
         //set remainingAmount once at start and not be reassigned
         if 0.0 == remainingAmount{
             remainingAmount = bill
         }
         //for the first person paying the bill with tip
-        if cnt == numberPeople {
+        if paidCount == numberPeople {
             //remaining amount based on the tip amount decided by the first paying person, presume that all people in the party pay the same tip percentage
             remainingAmount += tipAmount
             //first payment
@@ -183,9 +186,9 @@ class ViewController: UIViewController{
         //for the rest of the group
         else {
             //if the next person changes the tip amount
-            if remainingAmount != (splitBill * Double(cnt)) {
+            if remainingAmount != (splitBill * Double(paidCount)) {
                 //new remaining amount is recalculated based on the new tip amount
-                remainingAmount = splitBill * Double(cnt)
+                remainingAmount = splitBill * Double(paidCount)
                 //recalculate remaining amount after each payment
                 remainingAmount -= splitBill
             }
@@ -197,20 +200,20 @@ class ViewController: UIViewController{
             totalTip += splitBill - (bill / partySize)
         }
         totalPaidSeperate += splitBill
-        if 2 >= cnt {
-            remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " pax"
+        if 2 >= paidCount {
+            remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(paidCount-1) + " pax"
         }
         else {
-            remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(cnt-1) + " ppl"
+            remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(paidCount-1) + " ppl"
         }
         if remainingAmount <= 0 {
             paidButton.isUserInteractionEnabled = false
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
-        cnt -= 1
-        if cnt != numberPeople{
+        paidCount -= 1
+        if paidCount != numberPeople{
             partyNumberTextField.isUserInteractionEnabled = false
-            partyNumberTextField.backgroundColor = UIColor(red: 220.0/255.0, green: 220.0/255.0, blue: 220.0/255.0, alpha: 1.0)
+            partyNumberTextField.backgroundColor = UIColor(red: 47.0/255.0, green: 79.0/255.0, blue: 79.0/255.0, alpha: 1.0)
             undoButton.isUserInteractionEnabled = true
             undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
         }
@@ -218,10 +221,22 @@ class ViewController: UIViewController{
         totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
     @IBAction func undoButtonPressed(_ sender: UIButton) {
-        if self.undoMngr.canUndo {
-            self.undoMngr.undo()
+        // TODO: undo button using undoManager()
+//        if self.undoMngr.canUndo {
+//            self.undoMngr.undo()
+//        }
+//        self.undoButton.isEnabled = self.undoMngr.canUndo
+        if 0 == undoCount{
+            undoCount = result.count
         }
-        self.undoButton.isEnabled = self.undoMngr.canUndo
+        let cur = undoCount - 1
+        tipAmountSeparateLabel.text = String(format: "$%.2f", result[cur][0])
+        totalSeparateLabel.text = String(format: "$%.2f", result[cur][1])
+        splitAmountLabel.text = String(format: "$%.2f", result[cur][2])
+        remainingAmountLabel.text = String(format: "$%.2f", result[cur][3])
+        totalTipAmount.text = String(format: "$%.2f", result[cur][4])
+        paidCount += 1
+        undoCount -= 1
     }
     @IBAction func clearBarButton(_ sender: Any) {
         billAmountTextField.text = ""
@@ -243,9 +258,11 @@ class ViewController: UIViewController{
         remainingAmountLabel.text = String(format: "$%.2f", remainingAmount)
         totalTip = 0.0
         totalTipAmount.text = String(format: "$%.2f", totalTip)
-        cnt = 0
+        paidCount = 0
         paidButton.isUserInteractionEnabled = false
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+        undoButton.isUserInteractionEnabled = false
+        undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         partyNumberTextField.isUserInteractionEnabled = true
         partyNumberTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
     }
