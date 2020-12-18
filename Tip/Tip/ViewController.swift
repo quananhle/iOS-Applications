@@ -216,6 +216,9 @@ class ViewController: UIViewController{
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
+    @IBAction func undoButton(_ sender: UIButton) {
+
+    }
     @IBAction func clearBarButton(_ sender: Any) {
         billAmountTextField.text = ""
         bill = 0.0
@@ -241,9 +244,6 @@ class ViewController: UIViewController{
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         partyNumberTextField.isUserInteractionEnabled = true
         partyNumberTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
-    }
-    @IBAction func undoButton(_ sender: UIButton) {
-
     }
 }
 //make rounded border button
