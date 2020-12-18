@@ -110,7 +110,7 @@ class ViewController: UIViewController{
         let isPayingSeparately = [false, true]
         //if bill amount is not 0 and separte is selected
         if true == isPayingSeparately[partyControl.selectedSegmentIndex]{
-            partyNumberTextField.backgroundColor = UIColor.white
+            partyNumberTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0))
             partyNumberTextField.isUserInteractionEnabled = true
         }
         else {
@@ -235,7 +235,7 @@ class ViewController: UIViewController{
         paidButton.isUserInteractionEnabled = false
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         partyNumberTextField.isUserInteractionEnabled = true
-        partyNumberTextField.backgroundColor = UIColor(red: 220.0/255.0, green: 220.0/255.0, blue: 220.0/255.0, alpha: 1.0)
+        partyNumberTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
     }
     @IBAction func undoButton(_ sender: UIButton) {
 //        undoButton.isUserInteractionEnabled = true
