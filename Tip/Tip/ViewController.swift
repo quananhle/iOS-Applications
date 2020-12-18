@@ -204,7 +204,11 @@ class ViewController: UIViewController{
     }
     @IBAction func clearButton(_ sender: UIButton) {
         billAmountTextField.text = ""
-        
+        partyNumberTextField.text = ""
+        tipControl.selectedSegmentIndex = 3
+        tipCustomSlider.value = 0
+        totalPaidSeperate = 0.0
+        totalTip = 0.0
     }
 }
 //make rounded border button
