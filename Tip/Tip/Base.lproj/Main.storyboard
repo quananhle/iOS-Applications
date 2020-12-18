@@ -242,7 +242,9 @@
                             <outletCollection property="gestureRecognizers" destination="1ID-cc-KDu" appends="YES" id="ebY-OE-fBW"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="qVH-dk-DO1"/>
+                    <navigationItem key="navigationItem" id="qVH-dk-DO1">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="aA6-SP-wA6"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="billAmountTextField" destination="m4l-79-NOY" id="ghe-R0-4kf"/>
                         <outlet property="clearButton" destination="srZ-G0-3KB" id="7ZE-EF-Cn0"/>
@@ -284,9 +286,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Usd-GO-GoD"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Settings" id="aA6-SP-wA6"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjE-NU-e7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
