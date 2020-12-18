@@ -41,7 +41,8 @@ class ViewController: UIViewController{
     let tipPercentages = [0.15, 0.18, 0.2, 0.0]
     var paidCount = 0, undoCount = 0
     
-    var result: Set<Array<Double>> = Set()
+    var results: [[Double]] = Array()
+    var uniqueResults: Set<Array<Double>> = Set()
     var undoMngr = UndoManager()
 
     override func viewDidLoad() {
@@ -164,7 +165,11 @@ class ViewController: UIViewController{
         }
     }
     @IBAction func paidButtonPressed(_ sender: UIButton) {
-        result.insert([tipAmountSeparate, totalPaidSeperate, splitBill, remainingAmount, totalPaidSeperate])
+        let result = [tipAmountSeparate, totalPaidSeperate, splitBill, remainingAmount, totalPaidSeperate]
+        uniqueResults.insert(result)
+        if !uniqueResults.contains(result){
+            results.append(result)
+        }
         let numberPeople = Int(partyNumberTextField.text!) ?? 0
         //set variable cnt is partySize once at start and not be reassigned
         if 0 == paidCount {
@@ -211,6 +216,7 @@ class ViewController: UIViewController{
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
         paidCount -= 1
+        undoCount += 1
         if paidCount != numberPeople{
             partyNumberTextField.isUserInteractionEnabled = false
             partyNumberTextField.backgroundColor = UIColor(red: 47.0/255.0, green: 79.0/255.0, blue: 79.0/255.0, alpha: 1.0)
@@ -226,15 +232,14 @@ class ViewController: UIViewController{
 //            self.undoMngr.undo()
 //        }
 //        self.undoButton.isEnabled = self.undoMngr.canUndo
-        if 0 == undoCount{
-            undoCount = result.count
-        }
         let cur = undoCount - 1
-        tipAmountSeparateLabel.text = String(format: "$%.2f", result[cur][0])
-        totalSeparateLabel.text = String(format: "$%.2f", result[cur][1])
-        splitAmountLabel.text = String(format: "$%.2f", result[cur][2])
-        remainingAmountLabel.text = String(format: "$%.2f", result[cur][3])
-        totalTipAmount.text = String(format: "$%.2f", result[cur][4])
+        if 1 <= undoCount {
+            tipAmountSeparateLabel.text = String(format: "$%.2f", results[cur][0])
+            totalSeparateLabel.text = String(format: "$%.2f", results[cur][1])
+            splitAmountLabel.text = String(format: "$%.2f", results[cur][2])
+            remainingAmountLabel.text = String(format: "$%.2f", results[cur][3])
+            totalTipAmount.text = String(format: "$%.2f", results[cur][4])
+        }
         paidCount += 1
         undoCount -= 1
     }
