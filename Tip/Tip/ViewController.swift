@@ -227,6 +227,8 @@ class ViewController: UIViewController{
         totalTip = 0.0
         totalTipAmount.text = String(format: "$%.2f", totalTip)
         cnt = 0
+        paidButton.isUserInteractionEnabled = false
+        paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
     }
 }
 //make rounded border button
