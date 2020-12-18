@@ -40,6 +40,7 @@ class ViewController: UIViewController{
     var tipAmountSeparate = 0.0, totalPaidSeperate = 0.0
     let tipPercentages = [0.15, 0.18, 0.2, 0.0]
     var cnt = 0
+    var undoMngr = UndoManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -217,7 +218,9 @@ class ViewController: UIViewController{
         totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
     @IBAction func undoButton(_ sender: UIButton) {
-
+        if self.undoMngr.canUndo {
+            self.undoMngr.undo()
+        }
     }
     @IBAction func clearBarButton(_ sender: Any) {
         billAmountTextField.text = ""
