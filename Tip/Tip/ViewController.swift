@@ -165,11 +165,16 @@ class ViewController: UIViewController{
         }
     }
     @IBAction func paidButtonPressed(_ sender: UIButton) {
-        let result = [tipAmountSeparate, totalPaidSeperate, splitBill, remainingAmount, totalPaidSeperate]
+        //Create an array of unique array of results
+        let result = [tipAmountSeparate, totalPaidSeperate, splitBill, remainingAmount, totalTip]
         uniqueResults.insert(result)
-        if !uniqueResults.contains(result){
+        if uniqueResults.contains(result){
             results.append(result)
         }
+        //test
+        print("Set: \(uniqueResults)")
+        print("List: \(results)")
+        //------------------------------------------
         let numberPeople = Int(partyNumberTextField.text!) ?? 0
         //set variable cnt is partySize once at start and not be reassigned
         if 0 == paidCount {
