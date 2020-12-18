@@ -45,8 +45,9 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Tip Calculator"
+        billAmountTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
         partyNumberTextField.isUserInteractionEnabled = false
-        partyNumberTextField.backgroundColor = UIColor.lightGray
+        partyNumberTextField.backgroundColor = UIColor(red: 220.0/255.0, green: 220.0/255.0, blue: 220.0/255.0, alpha: 1.0)
         paidButton.isUserInteractionEnabled = false
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         undoButton.isUserInteractionEnabled = false
@@ -114,7 +115,7 @@ class ViewController: UIViewController{
             partyNumberTextField.isUserInteractionEnabled = true
         }
         else {
-            partyNumberTextField.backgroundColor = UIColor.lightGray
+            partyNumberTextField.backgroundColor = UIColor(red: 220.0/255.0, green: 220.0/255.0, blue: 220.0/255.0, alpha: 1.0)
             partyNumberTextField.text = ""
             partyNumberTextField.isUserInteractionEnabled = false
         }
@@ -238,8 +239,7 @@ class ViewController: UIViewController{
         partyNumberTextField.backgroundColor = UIColor(red: 238.0/255.0, green: 235.0/255.0, blue: 217.0/255.0, alpha: 1.0)
     }
     @IBAction func undoButton(_ sender: UIButton) {
-//        undoButton.isUserInteractionEnabled = true
-//        undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+
     }
 }
 //make rounded border button
