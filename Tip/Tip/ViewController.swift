@@ -41,7 +41,7 @@ class ViewController: UIViewController{
     let tipPercentages = [0.15, 0.18, 0.2, 0.0]
     var paidCount = 0, undoCount = 0
     
-    var result: [[Double]] = [[]]
+    var result: Set<Array<Double>> = Set()
     var undoMngr = UndoManager()
 
     override func viewDidLoad() {
@@ -164,7 +164,7 @@ class ViewController: UIViewController{
         }
     }
     @IBAction func paidButtonPressed(_ sender: UIButton) {
-        result.append([tipAmountSeparate, totalPaidSeperate, splitBill, remainingAmount, totalPaidSeperate])
+        result.insert([tipAmountSeparate, totalPaidSeperate, splitBill, remainingAmount, totalPaidSeperate])
         let numberPeople = Int(partyNumberTextField.text!) ?? 0
         //set variable cnt is partySize once at start and not be reassigned
         if 0 == paidCount {
