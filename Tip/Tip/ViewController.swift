@@ -208,18 +208,25 @@ class ViewController: UIViewController{
     }
     @IBAction func clearButton(_ sender: UIButton) {
         billAmountTextField.text = ""
+        bill = 0.0
         partyNumberTextField.text = ""
+        partySize = 0.0
         tipControl.selectedSegmentIndex = 3
         tipCustomSlider.value = 0
-        tipPercentage = 0.0
-        tipAmountSeparate = 0.0
-        totalPaidSeperate = 0.0
         splitBill = 0.0
-        remainingAmount = 0.0
-        totalTip = 0.0
-        tipPercentageLabel.text = String(format: "$%.2f", tipPercentage )
+        tipPercentage = 0.0
+        tipPercentageLabel.text = String(format: "$%.2f", tipPercentage)
+        tipAmountSeparate = 0.0
+        tipAmountSeparateLabel.text = String(format: "$%.2f", tipAmountSeparate)
+        totalPaidSeperate = 0.0
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
+        splitBill = 0.0
+        splitAmountLabel.text = String(format: "$%.2f", splitBill)
+        remainingAmount = 0.0
+        remainingAmountLabel.text = String(format: "$%.2f", remainingAmount)
+        totalTip = 0.0
         totalTipAmount.text = String(format: "$%.2f", totalTip)
+        cnt = 0
     }
 }
 //make rounded border button
