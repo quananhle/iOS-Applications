@@ -174,7 +174,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.16078431372549018" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                <state key="normal" title="UNDO">
+                                <state key="normal" title="CLEAR">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -189,7 +189,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="undoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Png-2r-8cl"/>
+                                    <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Png-2r-8cl"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nh-uK-qcS">
@@ -248,7 +248,6 @@
                         <outlet property="paidButton" destination="58a-wv-cTg" id="I2H-Ig-DR8"/>
                         <outlet property="partyControl" destination="hfL-en-TBq" id="oEl-Fd-L9u"/>
                         <outlet property="partyNumberTextField" destination="7Zs-FD-TOc" id="kQZ-rZ-M5k"/>
-                        <outlet property="partyOfLabel" destination="PzA-7D-yPo" id="mY8-VR-0RS"/>
                         <outlet property="remainingAmountLabel" destination="8nh-uK-qcS" id="Wvy-wp-OiO"/>
                         <outlet property="remainingLabel" destination="lws-JS-QAi" id="s6L-5d-xrY"/>
                         <outlet property="splitAmountLabel" destination="HND-BS-vaf" id="cW9-6O-Tlw"/>

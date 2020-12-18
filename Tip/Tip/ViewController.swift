@@ -13,7 +13,6 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var partyControl: UISegmentedControl!
-    @IBOutlet weak var partyOfLabel: UILabel!
     @IBOutlet weak var partyNumberTextField: UITextField!
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
@@ -202,18 +201,10 @@ class ViewController: UIViewController{
         cnt -= 1
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
-
     }
-    @IBAction func undoButton(_ sender: UIButton) {
+    @IBAction func clearButton(_ sender: UIButton) {
+        billAmountTextField.text = ""
         
-        if remainingAmount == total {
-            undoButton.isUserInteractionEnabled = false
-            undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
-        }
-        else {
-            undoButton.isUserInteractionEnabled = true
-            undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        }
     }
 }
 //make rounded border button
