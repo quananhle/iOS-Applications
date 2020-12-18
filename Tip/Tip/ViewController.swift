@@ -233,7 +233,7 @@ class ViewController: UIViewController{
         paidButton.isUserInteractionEnabled = false
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
     }
-    @IBAction func clearButton(_ sender: UIButton) {
+    @IBAction func undoButton(_ sender: UIButton) {
         billAmountTextField.text = ""
         bill = 0.0
         partyNumberTextField.text = ""
