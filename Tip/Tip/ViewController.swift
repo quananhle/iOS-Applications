@@ -211,7 +211,9 @@ class ViewController: UIViewController{
             //add up the tip paid by the next person to total tip amount
             totalTip += splitBill - (bill / partySize)
         }
+        // FIXME: totalPaidSeperate adds up if tip percentage is changed
         totalPaidSeperate += splitBill
+    
         if 2 >= paidCount {
             remainingAmountLabel.text = String(format: "$%.2f", remainingAmount) + " for " + String(paidCount-1) + " pax"
         }
@@ -229,7 +231,6 @@ class ViewController: UIViewController{
             undoButton.isUserInteractionEnabled = true
             undoButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
         }
-        // FIXME: totalPaidSeperate adds up if tip percentage is changed
         totalSeparateLabel.text = String(format: "$%.2f", totalPaidSeperate)
         totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
