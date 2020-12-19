@@ -26,42 +26,13 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Settings"
         let tipFields = [firstTipField, secondTipField, thirdTipField]
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // Read the stored tip options, update one of them to the new value,
-    // and set it back. Also update the default tip control
-    private func changeTipOption(index: Int, newValue: String) {
-        let normalizedNewValue = newValue.isEmpty ? "0" : newValue
-        let enteredInt = Int(normalizedNewValue)! ?? 0
-        let enteredPercent = Double(enteredInt) / 100
-        tipOptions[index] = enteredPercent
-    }
-    
-    // Update the colors on the page according to whether the
-    // light theme has been selected
-    private func updateColors(isLight: Bool) {
-        let labels = [tipOptionsLabel]
-    }
-    
-    // TODO: Enforce that the entered values are in the correct order
-    // (ie low is less than mid, which is less than high), or re-order
-    // them as needed
-    @IBAction func onFirstTipChanged(sender: AnyObject) {
-        changeTipOption(0, newValue: firstTipField.text!)
-    }
-
-    @IBAction func onMidTipChanged(sender: AnyObject) {
-        changeTipOption(1, newValue: secondTipField.text!)
-    }
-    
-    @IBAction func onHighTipChanged(sender: AnyObject) {
-        changeTipOption(2, newValue: thirdTipField.text!)
     }
     
     @IBAction func onTap(sender: AnyObject) {

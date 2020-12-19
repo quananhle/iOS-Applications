@@ -172,9 +172,9 @@ class ViewController: UIViewController{
         if uniqueResults.contains(result){
             results.append(result)
         }
-        //test
-        print("Set: \(uniqueResults)")
-        print("List: \(results)")
+//        //test
+//        print("Set: \(uniqueResults)")
+//        print("List: \(results)")
         //------------------------------------------
         let numberPeople = Int(partyNumberTextField.text!) ?? 0
         //set variable cnt is partySize once at start and not be reassigned
