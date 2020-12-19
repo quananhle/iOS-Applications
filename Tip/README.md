@@ -3,43 +3,20 @@
 ##### Published Date: 12/19/2020
 
 <p float="left">
-<img src="Pictures/Hnet-image.gif" align="center" height="700" width="350"></a>
-<kbd><a href="Pictures/main_page.png"><img src="Pictures/main_page.png" height="750" width="350" ></a></kbd>
+<img src="Pictures/Hnet-image.gif" align="center" height="800" width="400"></a>
+<kbd><a href="Pictures/main_page.png"><img src="Pictures/main_page.png" height="800" width="350" ></a></kbd>
 </p>
 
 ### Application Flow Diagrams
  
-* This app will acquire and display an interactive list of political officials that represent the current location (or a specified location) at each level of government.
+* This app will calculate the tip amount from a bill amount based on the tip percentage chosen by the users.
 
-* Android location services will be used to determine the user’s location.
+* There are two main functions: ```Together``` to calculate the tip amount of the entire bill amount (scenario when a bill is paid in full by one person), and ```Separate``` to calculate tip amount from each person paying separately in a party and display the total tip amount, total paid.
 
-* The [Google Civic Information API](https://developers.google.com/civic-information/) will be used to acquire the government official data (via ```REST``` service and
-```JSON``` results). .
+* The left bar button ```Clear``` will reset all input and value to original
 
-* Clicking on an official’s list entry opens a detailed view of that individual government representative.
+* The right bar button ```Settings``` allows users to update three default tip percentage and display __Author, Copyright data & Version)__
 
-* An ```About``` activity will show application information (Author, Copyright data & Version)
-
-* Clicking on the photo of an official will display a ```Photo Activity```, showing a larger version of the photo.
-
-* Permissions for `ACCESS_FINE_LOCATION` and `INTERNET`
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
- 
 ### Application Behavior Diagrams:
 
 #### 1) Main Activity
@@ -110,4 +87,6 @@ __Note__: Icons for the all menu and edit items are from Google’s Material Des
 <a href="pic/broken_image.png">
 <div align="center"><img src="pic/broken_image.png" height="750" width="400" ></div>
 </a>
+
+#### 2) Settings Activity
 
