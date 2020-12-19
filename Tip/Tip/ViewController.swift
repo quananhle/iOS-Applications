@@ -165,6 +165,7 @@ class ViewController: UIViewController{
         }
     }
     @IBAction func paidButtonPressed(_ sender: UIButton) {
+        undoCount += 1
         //Create an array of unique array of results
         let result = [tipAmountSeparate, totalPaidSeperate, splitBill, remainingAmount, totalTip]
         uniqueResults.insert(result)
@@ -221,7 +222,6 @@ class ViewController: UIViewController{
             paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         }
         paidCount -= 1
-        undoCount += 1
         if paidCount != numberPeople{
             partyNumberTextField.isUserInteractionEnabled = false
             partyNumberTextField.backgroundColor = UIColor(red: 47.0/255.0, green: 79.0/255.0, blue: 79.0/255.0, alpha: 1.0)
@@ -232,6 +232,7 @@ class ViewController: UIViewController{
         totalTipAmount.text = String(format: "$%.2f", totalTip)
     }
     @IBAction func undoButtonPressed(_ sender: UIButton) {
+        paidCount += 1
         // TODO: undo button using undoManager()
 //        if self.undoMngr.canUndo {
 //            self.undoMngr.undo()
@@ -241,11 +242,10 @@ class ViewController: UIViewController{
         if 1 <= undoCount {
             tipAmountSeparateLabel.text = String(format: "$%.2f", results[cur][0])
             totalSeparateLabel.text = String(format: "$%.2f", results[cur][1])
-            splitAmountLabel.text = String(format: "$%.2f", results[cur][2])
-            remainingAmountLabel.text = String(format: "$%.2f", results[cur][3])
+            splitAmountLabel.text = String(format: "$%.2f", results[cur][2]) + "/pax"
+            remainingAmountLabel.text = String(format: "$%.2f", results[cur][3]) + " for " + String(paidCount) + " pax"
             totalTipAmount.text = String(format: "$%.2f", results[cur][4])
         }
-        paidCount += 1
         undoCount -= 1
     }
     @IBAction func clearBarButton(_ sender: Any) {
@@ -273,6 +273,7 @@ class ViewController: UIViewController{
         paidCount = 0
         paidButton.isUserInteractionEnabled = false
         paidButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
+        undoCount = 0
         undoButton.isUserInteractionEnabled = false
         undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         if partyControl.selectedSegmentIndex == 1{
