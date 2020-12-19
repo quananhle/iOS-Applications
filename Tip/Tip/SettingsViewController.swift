@@ -27,7 +27,10 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Settings"
-        let tipFields = [firstTipField, secondTipField, thirdTipField]
+        firstTipField.isUserInteractionEnabled = false
+        secondTipField.isUserInteractionEnabled = false
+        thirdTipField.isUserInteractionEnabled = false
+        let tipFields = [firstTipField.text, secondTipField.text, thirdTipField.text]
     }
 
     override func didReceiveMemoryWarning() {
