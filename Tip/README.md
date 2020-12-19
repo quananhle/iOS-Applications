@@ -2,12 +2,12 @@
 
 ##### Published Date: 12/19/2020
 
-### Application Flow Diagrams
+<p float="left">
+<img src="Pictures/Hnet-image.gif" align="center" height="700" width="350"></a>
+<kbd><a href="Pictures/main_page.png"><img src="Pictures/main_page.png" height="750" width="350" ></a></kbd>
+</p>
 
-<p float="center">
-<kbd><a href="Pictures/main_page.png"><img src="Pictures/main_page.png" align="left" height="750" width="350" ></a></kbd>
-<img src="Pictures/Hnet-image.gif" height="750" width="350" />
-<p float="center">
+### Application Flow Diagrams
  
 * This app will acquire and display an interactive list of political officials that represent the current location (or a specified location) at each level of government.
 
