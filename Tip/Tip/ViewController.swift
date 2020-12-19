@@ -243,7 +243,12 @@ class ViewController: UIViewController{
             tipAmountSeparateLabel.text = String(format: "$%.2f", results[cur][0])
             totalSeparateLabel.text = String(format: "$%.2f", results[cur][1])
             splitAmountLabel.text = String(format: "$%.2f", results[cur][2]) + "/pax"
-            remainingAmountLabel.text = String(format: "$%.2f", results[cur][3]) + " for " + String(paidCount) + " pax"
+            if 2 >= paidCount {
+                remainingAmountLabel.text = String(format: "$%.2f", results[cur][3]) + " for " + String(paidCount) + " pax"
+            }
+            else {
+                remainingAmountLabel.text = String(format: "$%.2f", results[cur][3]) + " for " + String(paidCount) + " ppl"
+            }
             totalTipAmount.text = String(format: "$%.2f", results[cur][4])
         }
         undoCount -= 1
