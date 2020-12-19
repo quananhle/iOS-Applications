@@ -4,8 +4,11 @@
 
 ### Application Flow Diagrams
 
-<kbd><a href="Pictures/main_page.png"><img src="Pictures/main_page.png" align="center" height="750" width="350" ></a></kbd>
-
+<p float="center">
+<kbd><a href="Pictures/main_page.png"><img src="Pictures/main_page.png" align="left" height="750" width="350" ></a></kbd>
+<img src="Pictures/Hnet-image.gif" height="750" width="350" />
+<p float="center">
+ 
 * This app will acquire and display an interactive list of political officials that represent the current location (or a specified location) at each level of government.
 
 * Android location services will be used to determine the user’s location.
