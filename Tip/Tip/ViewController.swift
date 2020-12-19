@@ -253,6 +253,7 @@ class ViewController: UIViewController{
             totalTipAmount.text = String(format: "$%.2f", results[cur][4])
         }
         if cur == 0 {
+            totalTip = 0.0
             remainingAmountLabel.text = String(format: "$%.2f", bill + tipAmount) + " for " + String(Int(partySize)) + " ppl"
             undoButton.isUserInteractionEnabled = false
             undoButton.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
