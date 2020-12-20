@@ -35,7 +35,11 @@ __Note__: App icon is from [icons8.com](https://icons8.com/icons/set/calculator)
 
 >> If ```Separate``` is selected:
 >>> The party size now takes input from the user. Bill amount is now divided evenly between all member of the party. Tip amount is calculated separately based on the separated bill amount and tip percentages decided by each member. 
->>> ```PAID``` and ```UNDO``` buttons, and ```Split Bill```, ```Remaining```, and ```Total Tip``` fields appear after party size is entered by the user. Once ```PAID``` button is pressed, the field is greyed out again and no changes of party size can be made, unless the process is started all over.
+
+>>> ```PAID``` and ```UNDO``` buttons, and ```Split Bill```, ```Remaining```, and ```Total Tip``` fields appear after party size is entered by the user. 
+
+>>> ```PAID``` button is disabled after the total amount is paid in full. Once ```PAID``` button is pressed, the field is greyed out again and no changes of party size can be made, unless the process is started all over. ```UNDO``` button is disabled if ```PAID``` button has not been touched before, or when no payment has been made.
+
 * ```PAID``` button: subtracting the amount from the total bill amount after a member's payment
 * ```UNDO``` button: going back to previous amount after ```PAID``` button was pressed in case of tip percentage modification
 * ```Split Bill``` field: displaying the amount supposedly paid by each member in the party with tip amount included
