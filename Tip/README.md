@@ -28,8 +28,9 @@ __Note__: App icon is from [icons8.com](https://icons8.com/icons/set/calculator)
 <kbd><a href="Pictures/main_page_2.png"><img src="Pictures/main_page_2.png" height="750" width="350"></a></kbd>
 </p>
 
-> 1. Manually setting the location - Enter City, State (E.g.: Chicago, IL; Las Vegas, NV) or Zip Code (E.g.: 94027, 33480, 60043)
-> 2. Opening the info page:
+> 1. Enter bill amount
+> 2. Select between ```Together``` or ```Separate```
+> 3. 
 >> Clicking on [Google Civic Information API](https://developers.google.com/civic-information/) shall navigate the user to the API website. Clicking on developer's name shall direct the user to the Github page [Quananhle](https://github.com/Quananhle) or the all logo shall direct the user to the Github page [KnowYourGovernment](https://github.com/Quananhle/OOP-and-Android-App-Development/tree/master/Android-App-Developer/App/KnowYourGovernment) where the source code of the application is published.
 > 3. Opening the view of an individual official for details:
 ![Alt text](pic/photo_activity_2.png?raw=true "broken")
