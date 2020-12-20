@@ -32,6 +32,7 @@ __Note__: App icon is from [icons8.com](https://icons8.com/icons/set/calculator)
 > 2. Select between ```Together``` or ```Separate```
 >> If ```Together``` is selected:
 >>> The party size is kept greying out and takes no input from the user. Tip percentages can be chosen from 3 given options: ```15%, 18%, 20%``` or customized by sliding the slider from 0% up to 100% of the total bill amount.
+
 >> If ```Separate``` is selected:
 >>> The party size now takes input from the user. Bill amount is now divided evenly between each member of the party. Tip amount is calculated separately based on the separated bill amount and tip percentages decided by each member. Once ```PAID``` button is pressed, the field is greyed out again and no changes of party size can be made, unless the process is started all over.
 
