@@ -34,11 +34,15 @@ __Note__: App icon is from [icons8.com](https://icons8.com/icons/set/calculator)
 >>> The party size is kept greying out and takes no input from the user. Tip percentages can be chosen from 3 given options: ```15%, 18%, 20%``` or customized by sliding the slider from 0% up to 100% of the total bill amount.
 
 >> If ```Separate``` is selected:
->>> The party size now takes input from the user. Bill amount is now divided evenly between each member of the party. Tip amount is calculated separately based on the separated bill amount and tip percentages decided by each member. Once ```PAID``` button is pressed, the field is greyed out again and no changes of party size can be made, unless the process is started all over.
+>>> The party size now takes input from the user. Bill amount is now divided evenly between all member of the party. Tip amount is calculated separately based on the separated bill amount and tip percentages decided by each member. 
+>>> ```PAID``` and ```UNDO``` buttons, and ```Split Bill```, ```Remaining```, and ```Total Tip``` fields appear after party size is entered by the user. Once ```PAID``` button is pressed, the field is greyed out again and no changes of party size can be made, unless the process is started all over.
+* ```PAID``` button: subtracting the amount from the total bill amount after a member's payment
+* ```UNDO``` button: going back to previous amount after ```PAID``` button was pressed in case of tip percentage modification
+* ```Split Bill``` field: displaying the amount supposedly paid by each member in the party with tip amount included
+* ```Remaining``` field: displaying the remaining amount after each payment is paid
+* ```Total Tip``` fied: showing the total tip amount received from the party
 
->> Clicking on [Google Civic Information API](https://developers.google.com/civic-information/) shall navigate the user to the API website. Clicking on developer's name shall direct the user to the Github page [Quananhle](https://github.com/Quananhle) or the all logo shall direct the user to the Github page [KnowYourGovernment](https://github.com/Quananhle/OOP-and-Android-App-Development/tree/master/Android-App-Developer/App/KnowYourGovernment) where the source code of the application is published.
-
-![Alt text](pic/photo_activity_2.png?raw=true "broken")
+![Alt text](Pictures/application_details.png?raw=true "behavior_details")
 
 #### 2) Settings Activity
 
