@@ -25,6 +25,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="lEz-O8-UrF"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mv5-z8-6YS" id="f4V-5p-R3h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
