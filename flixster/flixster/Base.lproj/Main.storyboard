@@ -48,6 +48,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="posterView" destination="z9Y-QN-7iq" id="O57-qA-axD"/>
+                                            <outlet property="synopsisLabel" destination="k7u-fd-Jle" id="GYY-V2-nNd"/>
+                                            <outlet property="titleLabel" destination="AOe-yv-iNu" id="AHc-3f-fXf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
