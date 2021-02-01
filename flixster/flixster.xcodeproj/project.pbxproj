@@ -15,6 +15,7 @@
 		49D9676B25C7B06500B0DC8E /* flixsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D9676A25C7B06500B0DC8E /* flixsterUITests.swift */; };
 		49D9677925C7B5B000B0DC8E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D9677825C7B5B000B0DC8E /* MoviesViewController.swift */; };
 		49D9677B25C7BFE300B0DC8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D9677A25C7BFE300B0DC8E /* SceneDelegate.swift */; };
+		49D9677D25C7CCE800B0DC8E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D9677C25C7CCE800B0DC8E /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		49D9676C25C7B06500B0DC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49D9677825C7B5B000B0DC8E /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		49D9677A25C7BFE300B0DC8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		49D9677C25C7CCE800B0DC8E /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				49D9674825C7B06100B0DC8E /* AppDelegate.swift */,
 				49D9677A25C7BFE300B0DC8E /* SceneDelegate.swift */,
 				49D9674E25C7B06100B0DC8E /* Main.storyboard */,
+				49D9677C25C7CCE800B0DC8E /* MovieCell.swift */,
 				49D9675125C7B06500B0DC8E /* Assets.xcassets */,
 				49D9675325C7B06500B0DC8E /* LaunchScreen.storyboard */,
 				49D9675625C7B06500B0DC8E /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				49D9674925C7B06100B0DC8E /* AppDelegate.swift in Sources */,
 				49D9677925C7B5B000B0DC8E /* MoviesViewController.swift in Sources */,
+				49D9677D25C7CCE800B0DC8E /* MovieCell.swift in Sources */,
 				49D9677B25C7BFE300B0DC8E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
