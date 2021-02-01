@@ -9,7 +9,9 @@
 import UIKit
 
 class MoviesViewController: UIViewController {
-
+    // Dictionary
+    var movies = [[String:Any]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
