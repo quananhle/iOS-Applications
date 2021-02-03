@@ -14,7 +14,7 @@ The following **required** user stories are complete:
 
 Here's a walkthrough of implemented user stories:
 
-<a href="flix_1.gif"><img src="flix_1.gif" height="750" width="350"></a>
+<a href="https://media.giphy.com/media/Q7A4VPZCSiwCwSRDxq/giphy.gif"><img src="https://media.giphy.com/media/Q7A4VPZCSiwCwSRDxq/giphy.gif" height="750" width="350"></a>
 
 ## License
 
