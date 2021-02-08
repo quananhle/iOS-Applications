@@ -133,11 +133,11 @@
             </objects>
             <point key="canvasLocation" x="-1581" y="-42"/>
         </scene>
-        <!--Item-->
+        <!--Now Playing-->
         <scene sceneID="sqa-q8-nmn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qFE-R3-zjP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Qke-bB-fGH"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" id="Qke-bB-fGH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Be7-Qa-bgP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -152,27 +152,27 @@
             </objects>
             <point key="canvasLocation" x="-2265" y="704"/>
         </scene>
-        <!--View Controller-->
+        <!--Superhero-->
         <scene sceneID="48P-UT-Bc6">
             <objects>
-                <viewController id="52u-IQ-lvc" sceneMemberID="viewController">
+                <viewController id="52u-IQ-lvc" customClass="MovieGridViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ycJ-sm-Uxh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="f4z-Ik-8vK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="l5W-ku-Z1H"/>
+                    <navigationItem key="navigationItem" title="Superhero" id="l5W-ku-Z1H"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2V-zB-Qfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-852" y="1467"/>
         </scene>
-        <!--Item-->
+        <!--Superhero-->
         <scene sceneID="6tc-oD-CCk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="On2-OH-weX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8Hf-sM-iUD"/>
+                    <tabBarItem key="tabBarItem" title="Superhero" image="superhero_tabbar_item" id="8Hf-sM-iUD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RTo-bL-are">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -188,4 +188,8 @@
             <point key="canvasLocation" x="-852.17391304347836" y="703.79464285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="now_playing_tabbar_item" width="21" height="21"/>
+        <image name="superhero_tabbar_item" width="21" height="23"/>
+    </resources>
 </document>
