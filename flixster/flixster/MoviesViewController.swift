@@ -44,10 +44,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
-        cell.titleLabel.sizeToFit()
         let synopsis = movie["overview"] as! String
         cell.titleLabel.text = title
-        cell.synopsisLabel.sizeToFit()
         cell.synopsisLabel.text = synopsis
         
         let baseUrl = "https://image.tmdb.org/t/p/w185" //w342
