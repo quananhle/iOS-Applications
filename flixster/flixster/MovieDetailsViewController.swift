@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieDetailsViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class MovieDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         print (movie["title"])
+        titleLabel.text = movie["title"] as? String
+        synopsisLabel.text = movie["overview"] as? String
     }
     
 
