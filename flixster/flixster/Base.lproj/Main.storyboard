@@ -161,33 +161,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tpa-aq-BKk">
-                                <rect key="frame" x="0.0" y="28" width="414" height="834"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ki1-8B-cC7">
+                                <rect key="frame" x="0.0" y="36" width="414" height="827"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sj0-7R-oZl">
-                                    <size key="itemSize" width="204" height="221"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ie7-i9-7oW">
+                                    <size key="itemSize" width="198" height="237"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCollectionViewCell" id="qT4-bS-s9t" customClass="MovieGridCollectionViewCell" customModule="flixster" customModuleProvider="target">
-                                        <rect key="frame" x="105" y="0.0" width="204" height="221"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCollectionViewCell" id="doz-mD-YtK" customClass="MovieGridCollectionViewCell" customModule="flixster" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="237"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uM6-wo-qlh">
-                                            <rect key="frame" x="0.0" y="0.0" width="204" height="221"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fhR-Ym-Opy">
+                                            <rect key="frame" x="0.0" y="0.0" width="198" height="237"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qc2-gE-4t4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="221"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7K-iO-946">
+                                                    <rect key="frame" x="0.0" y="0.0" width="198" height="237"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="204" height="221"/>
+                                        <size key="customSize" width="198" height="237"/>
                                         <connections>
-                                            <outlet property="posterView" destination="Qc2-gE-4t4" id="f3j-DQ-Rso"/>
+                                            <outlet property="posterView" destination="K7K-iO-946" id="AW2-XZ-qMv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -198,7 +198,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Superhero" id="l5W-ku-Z1H"/>
                     <connections>
-                        <outlet property="collectionView" destination="tpa-aq-BKk" id="Xfk-0a-Ufa"/>
+                        <outlet property="collectionView" destination="ki1-8B-cC7" id="wdJ-lO-6OH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2V-zB-Qfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
