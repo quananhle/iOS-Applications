@@ -21,7 +21,6 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print (movie["title"])
         titleLabel.text = movie["title"] as? String
         synopsisLabel.text = movie["overview"] as? String
         
