@@ -37,7 +37,7 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieGridCollectionViewCell, for: indexPath) as! MovieGridCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCollectionViewCell", for: indexPath) as! MovieGridCollectionViewCell
         let movie = movies[indexPath.item]
         let baseUrl = "https://image.tmdb.org/t/p/w185" //w342
         let posterPath = movie["poster_path"] as! String
