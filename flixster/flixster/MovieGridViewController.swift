@@ -27,6 +27,8 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
            } else if let data = data {
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
             self.movies = dataDictionary["results"] as! [[String:Any]]
+            self.collectionView.reloadData()
+            print(self.movies)
             }
         }
         task.resume()
