@@ -13,7 +13,8 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
     var movies = [[String: Any]]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        collectionView.delegate = self
+        collectionView.dataSource = self
         // Do any additional setup after loading the view.
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -31,11 +32,12 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieGridCollectionViewCell, for: indexPath) as! MovieGridCollectionViewCell
+        return cell
     }
     
     /*
