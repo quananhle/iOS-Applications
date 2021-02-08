@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieGridViewController: UIViewController {
+class MovieGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     var movies = [[String: Any]]()
     override func viewDidLoad() {
@@ -30,7 +30,14 @@ class MovieGridViewController: UIViewController {
         task.resume()
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
     /*
     // MARK: - Navigation
 
