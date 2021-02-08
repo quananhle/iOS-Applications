@@ -51,6 +51,7 @@
                                             <outlet property="posterView" destination="z9Y-QN-7iq" id="O57-qA-axD"/>
                                             <outlet property="synopsisLabel" destination="k7u-fd-Jle" id="GYY-V2-nNd"/>
                                             <outlet property="titleLabel" destination="AOe-yv-iNu" id="AHc-3f-fXf"/>
+                                            <segue destination="Cvm-2f-uoG" kind="show" id="XDz-rR-yMO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -78,10 +79,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="C8y-0l-SmX"/>
                     </view>
+                    <navigationItem key="navigationItem" id="n3X-2n-a6P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sv-kW-kcw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789.8550724637682" y="116.51785714285714"/>
+            <point key="canvasLocation" x="2000" y="117"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GM8-X4-Ly5">
@@ -96,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUd-3v-kUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="117"/>
+            <point key="canvasLocation" x="3236" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sqa-q8-nmn">
