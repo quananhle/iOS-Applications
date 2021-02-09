@@ -9,6 +9,8 @@ The following **required** user stories are complete:
 - [x] User sees app icon on the home screen and styled launch screen
 - [x] User can scroll through a list of movies currently playing in theaters from The Movie DB API
 - [x] User sees a loading state while waiting for the movies to load
+- [x] User can tap a cell to see more details about a particular movie.
+- [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
 
 ## Video Walkthrough
 
