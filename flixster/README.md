@@ -14,16 +14,11 @@ The following **required** user stories are complete:
 
 Here's a walkthrough of implemented user stories:
 
-<!--
-<a href="https://gifyu.com/image/VNvd"><img src="https://s2.gifyu.com/images/flixster.gif" alt="flixster.gif" border="0" /></a>
+<a href="flixster.gif"><img src="flixster.gif" alt="flixster.gif" border="0" height="750" width="350"></a>
 
-<a href="https://gifyu.com/image/VNvd"><img src="https://s2.gifyu.com/images/flixster.gif" alt="flixster.gif" border="0" height="750" width="350"></a>
--->
-<a href="https://media.giphy.com/media/6cKthuCKSOv4xCEH8C/giphy.gif"><img src="https://media.giphy.com/media/6cKthuCKSOv4xCEH8C/giphy.gif" height="750" width="350"></a>
-<iframe src="https://giphy.com/embed/6cKthuCKSOv4xCEH8C" width="233" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/6cKthuCKSOv4xCEH8C">via GIPHY</a></p>
 ## License
 
-Copyright 2018 CSUMB
+Copyright 2021 CSUMB
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
