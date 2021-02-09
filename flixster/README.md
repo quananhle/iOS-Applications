@@ -20,7 +20,7 @@ Here's a walkthrough of implemented user stories:
 <a href="https://gifyu.com/image/VNvd"><img src="https://s2.gifyu.com/images/flixster.gif" alt="flixster.gif" border="0" height="750" width="350"></a>
 -->
 <a href="https://media.giphy.com/media/6cKthuCKSOv4xCEH8C/giphy.gif"><img src="https://media.giphy.com/media/6cKthuCKSOv4xCEH8C/giphy.gif" height="750" width="350"></a>
-
+<iframe src="https://giphy.com/embed/6cKthuCKSOv4xCEH8C" width="233" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/6cKthuCKSOv4xCEH8C">via GIPHY</a></p>
 ## License
 
 Copyright 2018 CSUMB
