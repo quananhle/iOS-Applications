@@ -16,10 +16,11 @@ Here's a walkthrough of implemented user stories:
 
 <!--
 <a href="https://gifyu.com/image/VNvd"><img src="https://s2.gifyu.com/images/flixster.gif" alt="flixster.gif" border="0" /></a>
-<a href="https://media.giphy.com/media/Q7A4VPZCSiwCwSRDxq/giphy.gif"><img src="https://media.giphy.com/media/Q7A4VPZCSiwCwSRDxq/giphy.gif" height="750" width="350"></a>
+
 <a href="https://gifyu.com/image/VNvd"><img src="https://s2.gifyu.com/images/flixster.gif" alt="flixster.gif" border="0" height="750" width="350"></a>
 -->
-<a href="https://gifyu.com/image/VNvd"><img src="https://s2.gifyu.com/images/flixster.gif" alt="flixster.gif" border="0" /></a>
+<a href="https://media.giphy.com/media/6cKthuCKSOv4xCEH8C/giphy.gif"><img src="https://media.giphy.com/media/6cKthuCKSOv4xCEH8C/giphy.gif" height="750" width="350"></a>
+
 ## License
 
 Copyright 2018 CSUMB
