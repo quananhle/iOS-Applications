@@ -27,9 +27,6 @@ class HomeTableViewController: UITableViewController {
                                                                 tweetArray.append(tweet)
                                                             }
         }, failure: { (Error) in print("Could not retrieve tweets!")})
-        
-        func getDictionariesRequest(url: String, parameters: [String:Any], success: @escaping ([NSDictionary]) -> (), failure: @escaping (Error) -> ()){
-
     }
     
     
