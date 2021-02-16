@@ -101,6 +101,11 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="CaC-pL-CjB" secondAttribute="bottom" id="sPc-fz-fxe"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImageView" destination="CaC-pL-CjB" id="EII-ok-Cns"/>
+                                    <outlet property="tweetContent" destination="OF3-1j-Kvs" id="KcZ-Mr-hvs"/>
+                                    <outlet property="userNameLabel" destination="pkl-CE-QFS" id="fVn-9C-Vbv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
