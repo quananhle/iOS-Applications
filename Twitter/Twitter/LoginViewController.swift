@@ -15,6 +15,10 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func onLoginButton(_ sender: Any) {
+        TwitterAPICaller.client?.login(url: https://api.twitter.com/oauth/request_token
+, success:, failure:)
+    }
     
 
     /*
