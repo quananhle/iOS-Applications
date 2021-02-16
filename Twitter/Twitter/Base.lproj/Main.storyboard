@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="gfz-Wq-3fi">
             <objects>
-                <viewController id="OVd-Tw-Fhf" sceneMemberID="viewController">
+                <viewController id="OVd-Tw-Fhf" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nbJ-24-Jdp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="Ohz-Hf-dBw"/>
                     </view>
                     <connections>
-                        <segue destination="8BA-iE-G9O" kind="presentation" id="37P-es-4Me"/>
+                        <segue destination="8BA-iE-G9O" kind="presentation" identifier="loginToHome" id="37P-es-4Me"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Eh-sb-PVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
