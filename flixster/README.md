@@ -9,16 +9,18 @@ The following **required** user stories are complete:
 - [x] User sees app icon on the home screen and styled launch screen
 - [x] User can scroll through a list of movies currently playing in theaters from The Movie DB API
 - [x] User sees a loading state while waiting for the movies to load
+- [x] User can tap a cell to see more details about a particular movie.
+- [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<a href="https://media.giphy.com/media/Q7A4VPZCSiwCwSRDxq/giphy.gif"><img src="https://media.giphy.com/media/Q7A4VPZCSiwCwSRDxq/giphy.gif" height="750" width="350"></a>
+<a href="flixster.gif"><img src="flixster.gif" alt="flixster.gif" border="0" height="750" width="350"></a>
 
 ## License
 
-Copyright 2018 CSUMB
+Copyright 2021 CSUMB
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
