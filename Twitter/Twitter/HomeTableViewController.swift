@@ -14,6 +14,7 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadTweet()
 
     }
     
@@ -26,6 +27,7 @@ class HomeTableViewController: UITableViewController {
                                                             for tweet in tweets {
                                                                 tweetArray.append(tweet)
                                                             }
+                                                        tableView.reloadData()
         }, failure: { (Error) in print("Could not retrieve tweets!")})
     }
     
@@ -37,9 +39,9 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as TweetCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCell
         cell.userNameLabel.text = "Some name"
-        cell.tweetContent.text  = "Something else"
+        cell.tweetContent.text  = tweetArray[indexPath.row]["text"]
         return cell
     }
     
@@ -47,11 +49,11 @@ class HomeTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tweetArray.count
     }
 }
