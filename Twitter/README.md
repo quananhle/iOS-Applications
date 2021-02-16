@@ -18,5 +18,6 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-<img src="https://github.com/Quananhle/iOS-Applications/blob/main/Twitter/Twitter-part1.gif" width=250><br>
+<!--<img src="https://github.com/Quananhle/iOS-Applications/blob/main/Twitter/Twitter-part1.gif" width=250><br>-->
 
+<a href="Twitter-part1.gif"><img src="Twitter-part1.gif" alt="Twitter-part1.gif" border="0" height="750" width="350"></a>
