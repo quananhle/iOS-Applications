@@ -14,7 +14,12 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
-
+    
+    @IBAction func onLogout(_ sender: Any) {
+        TwitterAPICaller.client?.logout()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
