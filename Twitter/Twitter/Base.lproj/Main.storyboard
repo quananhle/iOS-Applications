@@ -152,7 +152,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QR2-2H-FB0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NLB-99-61L"/>
+                    <navigationItem key="navigationItem" id="NLB-99-61L">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="l3E-Vj-PMb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="EMZ-wi-eXT">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7t-5q-2R9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
