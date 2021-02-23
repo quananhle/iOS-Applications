@@ -135,10 +135,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QR2-2H-FB0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NLB-99-61L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7t-5q-2R9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="-1309"/>
+            <point key="canvasLocation" x="1063.2" y="-1309.2953523238382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1wd-eN-ZKA">
@@ -160,6 +161,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5Y-rl-nOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1960" y="-1308"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AtS-4Y-CAE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QSi-ix-x1V" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3rM-k5-QUU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vwP-da-5Ai" kind="relationship" relationship="rootViewController" id="kls-vN-m5i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPO-2d-U28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="-1309.2953523238382"/>
         </scene>
     </scenes>
 </document>
