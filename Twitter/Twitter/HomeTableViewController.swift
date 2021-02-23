@@ -16,7 +16,7 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
 //        refresher.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
 //        self.tweetArray.refreshControl = refresher
-//        loadTweets()
+        loadTweets()
     }
     
     override func viewDidAppear(_ animated: Bool) {
