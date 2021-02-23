@@ -155,9 +155,15 @@
                     <navigationItem key="navigationItem" id="NLB-99-61L">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="l3E-Vj-PMb">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancel:" destination="vwP-da-5Ai" id="2c5-yc-8kR"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="EMZ-wi-eXT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="tweet:" destination="vwP-da-5Ai" id="kAO-7D-b0B"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
