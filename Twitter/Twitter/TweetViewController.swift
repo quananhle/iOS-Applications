@@ -2,13 +2,14 @@
 //  TweetViewController.swift
 //  Twitter
 //
-//  Created by Ashley Le on 2/22/21.
-//  Copyright © 2021 Dan. All rights reserved.
+//  Created by Quan Le on 02/23/2021
+//  Copyright © 2019 Dan. All rights reserved.
 //
 
 import UIKit
 
 class TweetViewController: UIViewController {
+    
     @IBOutlet weak var tweetTextView: UITextView!
 
     override func viewDidLoad() {
@@ -17,21 +18,23 @@ class TweetViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func onCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    @IBAction func tweet(_ sender: Any) {
+    
+    
+    @IBAction func onTweet(_ sender: Any) {
         if (!tweetTextView.text.isEmpty) {
-            TwitterAPICaller.client?.postTweet(tweetString: tweetTextView.text, success: {self.dismiss(animated: true, completion: nil)}, failure: { (error) in print ("Error posting tweet \(error)")
+            TwitterAPICaller.client?.postTweet(tweetString: tweetTextView.text, success: {
+                self.dismiss(animated: true, completion: nil)
+            }, failure: { (error) in
+                print("Error posting tweet \(error)")
                 self.dismiss(animated: true, completion: nil)
             })
-        }
-        else {
+        } else {
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
-    
     
     /*
     // MARK: - Navigation
