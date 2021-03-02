@@ -9,11 +9,8 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var captionLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -107,14 +107,14 @@
                                                         <constraint firstAttribute="width" secondItem="9wl-Jg-Da5" secondAttribute="height" multiplier="199:232" id="oCO-by-uHD"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyn-aD-ACT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Quan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyn-aD-ACT">
                                                     <rect key="frame" x="8" y="480" width="41" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wow! So much Coin!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRS-Qo-Oa3">
-                                                    <rect key="frame" x="57" y="480" width="158" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow! So much Coin!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRS-Qo-Oa3">
+                                                    <rect key="frame" x="57" y="480" width="349" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -134,7 +134,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="captionLabel" destination="yRS-Qo-Oa3" id="yQL-Hr-fph"/>
                                             <outlet property="photoView" destination="9wl-Jg-Da5" id="cN4-j3-qgF"/>
+                                            <outlet property="usernameLabel" destination="Hyn-aD-ACT" id="uZR-zo-4x2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -151,9 +153,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="captionLabel" destination="yRS-Qo-Oa3" id="0v1-yf-sCf"/>
                         <outlet property="tableView" destination="gGy-Gd-bmk" id="Ap6-WV-rtW"/>
-                        <outlet property="usernameLabel" destination="Hyn-aD-ACT" id="m2x-TT-hgW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sz6-8R-7eQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
