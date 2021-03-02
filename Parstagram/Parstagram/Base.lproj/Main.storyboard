@@ -97,6 +97,55 @@
             </objects>
             <point key="canvasLocation" x="1871.0144927536232" y="116.51785714285714"/>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="k6u-Tr-h8u">
+            <objects>
+                <viewController id="3CY-ow-qEe" customClass="CameraViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3EJ-sH-90n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-rn-bDx">
+                                <rect key="frame" x="20" y="127" width="349" height="342"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rJd-Hv-wPd" appends="YES" id="o1d-PM-5c4"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lat-yt-b5K">
+                                <rect key="frame" x="20" y="495" width="349" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="196-vt-WBC">
+                                <rect key="frame" x="20" y="558" width="349" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="3CY-ow-qEe" eventType="touchUpInside" id="Qh4-PB-aI9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rOy-iy-4eU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jRd-wW-Vgs"/>
+                    <connections>
+                        <outlet property="commentField" destination="Lat-yt-b5K" id="Umg-Xz-zEt"/>
+                        <outlet property="imageView" destination="qk7-rn-bDx" id="CKN-Ou-Zay"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cA4-Dp-Boy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rJd-Hv-wPd">
+                    <connections>
+                        <action selector="onCameraButton:" destination="3CY-ow-qEe" id="Te1-lu-Jhi"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3672.4637681159425" y="116.51785714285714"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BEq-yD-3Mi">
             <objects>
@@ -115,8 +164,27 @@
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="116.51785714285714"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="spO-Q8-HFF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BUZ-x9-tlg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d78-Oi-tXL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3CY-ow-qEe" kind="relationship" relationship="rootViewController" id="5hT-T0-e2r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRp-Sd-Z8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2760.8695652173915" y="116.51785714285714"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="image_placeholder" width="375" height="375"/>
         <image name="instagram_logo" width="255" height="108"/>
     </resources>
 </document>
