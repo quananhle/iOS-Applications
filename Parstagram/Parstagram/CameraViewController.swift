@@ -9,6 +9,8 @@
 import UIKit
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//    @IBOutlet weak var imageView: UIImageView!
+//    @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentField: UITextField!
     
@@ -20,6 +22,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func onSubmitButton(_ sender: Any) {
     }
+    
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self

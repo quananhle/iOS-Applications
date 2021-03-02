@@ -114,10 +114,6 @@
                         <viewLayoutGuide key="safeArea" id="rOy-iy-4eU"/>
                     </view>
                     <navigationItem key="navigationItem" id="jRd-wW-Vgs"/>
-                    <connections>
-                        <outlet property="commentField" destination="Lat-yt-b5K" id="Umg-Xz-zEt"/>
-                        <outlet property="imageView" destination="qk7-rn-bDx" id="CKN-Ou-Zay"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cA4-Dp-Boy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="rJd-Hv-wPd">
@@ -148,7 +144,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="onSubmitButton:" destination="3CY-ow-qEe" eventType="touchUpInside" id="Qh4-PB-aI9"/>
+                                    <action selector="onSubmitButton:" destination="CeU-c3-9hb" eventType="touchUpInside" id="BYA-rn-pIv"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-rn-bDx">
@@ -163,8 +159,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hML-Dq-UJ1"/>
                     </view>
+                    <connections>
+                        <outlet property="commentField" destination="Lat-yt-b5K" id="yL4-hq-KvO"/>
+                        <outlet property="imageView" destination="qk7-rn-bDx" id="cv5-6g-CCT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vh7-ll-jtk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0gB-kW-7BB"/>
             </objects>
             <point key="canvasLocation" x="2712" y="117"/>
         </scene>
