@@ -17,5 +17,5 @@ target 'Parstagram' do
     # Pods for testing
    pod 'Parse'
   end
-
+pod 'Alamofire', '~> 5.2'
 end

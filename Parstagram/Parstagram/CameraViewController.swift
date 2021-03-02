@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamoFireImage
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
@@ -33,6 +34,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
 
         present(picker, animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+        
     }
     
     /*
