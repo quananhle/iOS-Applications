@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AlamoFireImage
+import AlamofireImage
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
