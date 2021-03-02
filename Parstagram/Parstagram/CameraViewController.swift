@@ -24,6 +24,15 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        }
+        else {
+            picker.sourceType = .photoLibrary
+        }
+        
+        present(picker, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
