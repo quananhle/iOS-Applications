@@ -72,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="passwordField" destination="8bC-Xf-vdC" id="BnE-51-hrQ"/>
+                        <outlet property="passwordField" destination="EVl-pY-wot" id="dLV-u9-0Xp"/>
                         <outlet property="usernameField" destination="kTA-Fn-56o" id="USU-iK-0qN"/>
                         <segue destination="kbf-BH-ZT2" kind="presentation" identifier="loginSegue" id="Hil-GA-V10"/>
                     </connections>
