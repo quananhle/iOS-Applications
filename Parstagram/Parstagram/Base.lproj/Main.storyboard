@@ -88,6 +88,51 @@
                     <view key="view" contentMode="scaleToFill" id="Ybg-Vd-cQF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGy-Gd-bmk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="509" id="LOp-MP-oMc">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="509"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LOp-MP-oMc" id="h2N-Fs-her">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="509"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9wl-Jg-Da5">
+                                                    <rect key="frame" x="8" y="8" width="398" height="464"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyn-aD-ACT">
+                                                    <rect key="frame" x="8" y="480" width="41" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow! So much Coin!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRS-Qo-Oa3">
+                                                    <rect key="frame" x="57" y="480" width="158" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="yRS-Qo-Oa3" secondAttribute="bottom" constant="8" id="D9G-jJ-bHx"/>
+                                                <constraint firstItem="9wl-Jg-Da5" firstAttribute="top" secondItem="h2N-Fs-her" secondAttribute="top" constant="8" id="RKZ-aG-VJ7"/>
+                                                <constraint firstItem="yRS-Qo-Oa3" firstAttribute="leading" secondItem="Hyn-aD-ACT" secondAttribute="trailing" constant="8" id="Wlo-PB-pML"/>
+                                                <constraint firstItem="Hyn-aD-ACT" firstAttribute="top" secondItem="9wl-Jg-Da5" secondAttribute="bottom" constant="8" id="ecE-3q-lUe"/>
+                                                <constraint firstItem="9wl-Jg-Da5" firstAttribute="top" secondItem="h2N-Fs-her" secondAttribute="top" constant="8" id="fOs-74-ehM"/>
+                                                <constraint firstItem="Hyn-aD-ACT" firstAttribute="leading" secondItem="h2N-Fs-her" secondAttribute="leading" constant="8" id="h2T-ga-IMb"/>
+                                                <constraint firstItem="yRS-Qo-Oa3" firstAttribute="top" secondItem="9wl-Jg-Da5" secondAttribute="bottom" constant="8" id="hDT-7E-ytT"/>
+                                                <constraint firstItem="9wl-Jg-Da5" firstAttribute="leading" secondItem="h2N-Fs-her" secondAttribute="leading" constant="8" id="ibZ-iB-Vkt"/>
+                                                <constraint firstAttribute="trailing" secondItem="9wl-Jg-Da5" secondAttribute="trailing" constant="8" id="uts-te-SBb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="OZr-Bt-btI"/>
                     </view>
@@ -101,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sz6-8R-7eQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="117"/>
+            <point key="canvasLocation" x="1776.8115942028987" y="116.51785714285714"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="i9F-nw-owp">
