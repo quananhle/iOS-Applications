@@ -48,6 +48,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    //        Parse.initialize(with: ParseClientConfiguration(block:
+    //            { (configuration: ParseMutableClientConfiguration) -> Void in
+    //            configuration.applicationId = "Parstagram"
+    //            configuration.server = "https://whispering-stream-51370.herokuapp.com/parse"
+    //            })
+    //        )
+    //        if PFUser.current() != nil {
+    //            let main = UIStoryboard(name: "Main", bundle: nil)
+    //            let feedNavigationController = main.instantiateViewController(identifier: "FeedNavigationController")
+    //            window?.rootViewController = feedNavigationController
+    //        }
 }
 

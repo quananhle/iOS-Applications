@@ -22,18 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 $0.clientKey = "gZp4PmKR8VQ2mJaBxZsLrK6hDFPp4dN7oVy8BthJ"
                 $0.server = "https://parseapi.back4app.com"
         }
-        Parse.initialize(with: ParseClientConfiguration(block:
-            { (configuration: ParseMutableClientConfiguration) -> Void in
-            configuration.applicationId = "Parstagram"
-            configuration.server = "https://whispering-stream-51370.herokuapp.com/parse"
-            })
-        )
-        if PFUser.current() != nil {
-            let main = UIStoryboard(name: "Main", bundle: nil)
-            let feedNavigationController = main.instantiateViewController(identifier: "FeedNavigationController")
-            window?.rootViewController = feedNavigationController
-        }
-
+        Parse.initialize(with: parseConfig)
         return true
     }
 
