@@ -24,5 +24,7 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-
+<p float="left">
+<a href="Parstagram-part1.gif"><img src="Parstagram-part1.gif" height="750" width="350"></a>
+</p>
 
