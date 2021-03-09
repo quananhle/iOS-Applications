@@ -189,6 +189,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func keyboardWillBeHidden(note: Notification) {
         commentBar.inputTextView.text = nil
         showsCommentBar = false
+        becomeFirstResponder()
     }
     
     override var inputAccessoryView: UIView? {
