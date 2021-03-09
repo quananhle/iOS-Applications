@@ -139,7 +139,7 @@
                                             <outlet property="usernameLabel" destination="Hyn-aD-ACT" id="uZR-zo-4x2"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jM8-y2-t33">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="jM8-y2-t33" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="537" width="414" height="37.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jM8-y2-t33" id="bNP-C0-SLa">
@@ -171,6 +171,10 @@
                                                 <constraint firstItem="bBm-tv-gRc" firstAttribute="top" secondItem="bNP-C0-SLa" secondAttribute="top" constant="8" id="zlH-dp-ENz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="NN3-dz-hvF" id="Ari-Et-QUd"/>
+                                            <outlet property="nameLabel" destination="bBm-tv-gRc" id="0Ol-CL-rsI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
