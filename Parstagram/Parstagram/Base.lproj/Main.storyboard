@@ -139,6 +139,39 @@
                                             <outlet property="usernameLabel" destination="Hyn-aD-ACT" id="uZR-zo-4x2"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jM8-y2-t33">
+                                        <rect key="frame" x="0.0" y="537" width="414" height="37.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jM8-y2-t33" id="bNP-C0-SLa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBm-tv-gRc">
+                                                    <rect key="frame" x="16" y="8" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN3-dz-hvF">
+                                                    <rect key="frame" x="66" y="8" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NN3-dz-hvF" firstAttribute="top" secondItem="bNP-C0-SLa" secondAttribute="top" constant="8" id="6Mo-j3-KYq"/>
+                                                <constraint firstItem="NN3-dz-hvF" firstAttribute="leading" secondItem="bBm-tv-gRc" secondAttribute="trailing" constant="8" id="76i-sc-yw5"/>
+                                                <constraint firstItem="NN3-dz-hvF" firstAttribute="top" secondItem="bNP-C0-SLa" secondAttribute="top" constant="8" id="BNK-Mk-hii"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NN3-dz-hvF" secondAttribute="trailing" constant="8" id="JbY-mB-IDh"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NN3-dz-hvF" secondAttribute="bottom" constant="8" id="Rtj-wj-MXq"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bBm-tv-gRc" secondAttribute="bottom" constant="8" id="Zcl-hr-oOX"/>
+                                                <constraint firstItem="NN3-dz-hvF" firstAttribute="leading" secondItem="bBm-tv-gRc" secondAttribute="trailing" constant="8" id="s5J-eX-9Vk"/>
+                                                <constraint firstItem="bBm-tv-gRc" firstAttribute="leading" secondItem="bNP-C0-SLa" secondAttribute="leading" constant="16" id="yQG-Da-VJc"/>
+                                                <constraint firstItem="bBm-tv-gRc" firstAttribute="top" secondItem="bNP-C0-SLa" secondAttribute="top" constant="8" id="zlH-dp-ENz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
