@@ -108,13 +108,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Quan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyn-aD-ACT">
-                                                    <rect key="frame" x="8" y="480" width="41" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="16" y="480" width="43.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow! So much Coin!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRS-Qo-Oa3">
-                                                    <rect key="frame" x="57" y="480" width="349" height="20.5"/>
+                                                    <rect key="frame" x="67.5" y="480" width="338.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -127,7 +127,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="yRS-Qo-Oa3" secondAttribute="trailing" constant="8" id="cXt-iE-krd"/>
                                                 <constraint firstItem="Hyn-aD-ACT" firstAttribute="top" secondItem="9wl-Jg-Da5" secondAttribute="bottom" constant="8" id="ecE-3q-lUe"/>
                                                 <constraint firstItem="9wl-Jg-Da5" firstAttribute="top" secondItem="h2N-Fs-her" secondAttribute="top" constant="8" id="fOs-74-ehM"/>
-                                                <constraint firstItem="Hyn-aD-ACT" firstAttribute="leading" secondItem="h2N-Fs-her" secondAttribute="leading" constant="8" id="h2T-ga-IMb"/>
+                                                <constraint firstItem="Hyn-aD-ACT" firstAttribute="leading" secondItem="h2N-Fs-her" secondAttribute="leading" constant="16" id="h2T-ga-IMb"/>
                                                 <constraint firstItem="yRS-Qo-Oa3" firstAttribute="top" secondItem="9wl-Jg-Da5" secondAttribute="bottom" constant="8" id="hDT-7E-ytT"/>
                                                 <constraint firstItem="9wl-Jg-Da5" firstAttribute="leading" secondItem="h2N-Fs-her" secondAttribute="leading" constant="8" id="ibZ-iB-Vkt"/>
                                                 <constraint firstAttribute="trailing" secondItem="9wl-Jg-Da5" secondAttribute="trailing" constant="8" id="uts-te-SBb"/>
@@ -146,14 +146,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBm-tv-gRc">
-                                                    <rect key="frame" x="16" y="8" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quanle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBm-tv-gRc">
+                                                    <rect key="frame" x="16" y="8" width="55.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN3-dz-hvF">
-                                                    <rect key="frame" x="66" y="8" width="42" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One word: Doge" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN3-dz-hvF">
+                                                    <rect key="frame" x="79.5" y="8" width="124" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
