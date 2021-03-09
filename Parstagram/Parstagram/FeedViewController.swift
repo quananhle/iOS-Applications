@@ -50,10 +50,29 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
-        cell.photoView.af_setImage(withURL: url)
+//        cell.photoView.af_setImage(withURL: url)
+        cell.photoView.af.setImage(withURL: url)
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        let comment = PFObject(className: "Comments")
+        comment["texts"] = "One word: Doge"
+        comment["post"] = post
+        comment["author"] = PFUser.current()!
+        
+        post.add(comment, forKey: "comments")
+        post.saveInBackground { (success, error) in
+            if success {
+                print ("Comment saved!")
+            }
+            else {
+                print ("Error saving comment")
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
