@@ -123,7 +123,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
     }
     
-    @IBAction func onLogOut(_ sender: Any) {
+    @IBAction func onLogoutButton(_ sender: Any) {
         PFUser.logOut()
         let main = UIStoryboard(name: "Main", bundle: nil)
         let login = main.instantiateViewController(withIdentifier: "LoginViewController")
