@@ -114,7 +114,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow! So much Coin!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRS-Qo-Oa3">
-                                                    <rect key="frame" x="67.5" y="480" width="338.5" height="20.5"/>
+                                                    <rect key="frame" x="67.5" y="480" width="338.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -122,7 +122,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yRS-Qo-Oa3" secondAttribute="bottom" constant="8" id="D9G-jJ-bHx"/>
+                                                <constraint firstItem="yRS-Qo-Oa3" firstAttribute="leading" secondItem="Hyn-aD-ACT" secondAttribute="trailing" constant="8" id="NQK-tI-oJu"/>
+                                                <constraint firstAttribute="bottom" secondItem="yRS-Qo-Oa3" secondAttribute="bottom" constant="8" id="R8y-jM-DTq"/>
+                                                <constraint firstItem="yRS-Qo-Oa3" firstAttribute="top" secondItem="9wl-Jg-Da5" secondAttribute="bottom" constant="8" id="RCJ-Ly-23Y"/>
                                                 <constraint firstItem="9wl-Jg-Da5" firstAttribute="top" secondItem="h2N-Fs-her" secondAttribute="top" constant="8" id="RKZ-aG-VJ7"/>
+                                                <constraint firstAttribute="trailing" secondItem="yRS-Qo-Oa3" secondAttribute="trailing" constant="8" id="Rci-Ze-bLN"/>
                                                 <constraint firstItem="yRS-Qo-Oa3" firstAttribute="leading" secondItem="Hyn-aD-ACT" secondAttribute="trailing" constant="8" id="Wlo-PB-pML"/>
                                                 <constraint firstAttribute="trailing" secondItem="yRS-Qo-Oa3" secondAttribute="trailing" constant="8" id="cXt-iE-krd"/>
                                                 <constraint firstItem="Hyn-aD-ACT" firstAttribute="top" secondItem="9wl-Jg-Da5" secondAttribute="bottom" constant="8" id="ecE-3q-lUe"/>
