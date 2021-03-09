@@ -66,7 +66,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-//        DataRequest.addAcceptableImageContentTypes(["application/octet-stream"])
         // Do any additional setup after loading the view.
     }
     
