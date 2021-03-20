@@ -4,8 +4,8 @@ Developed in Swift and XCode
 1. [Tip Calculator](https://github.com/Quananhle/iOS-Applications/tree/main/Tip)
 
 <p float="left">
-<a href="Pictures/Hnet-image.gif"><img src="Pictures/Hnet-image.gif" align="center" height="800" width="400"></a>
-<kbd><a href="Pictures/main_page.png"><img src="Pictures/main_page.png" height="800" width="350" ></a></kbd>
+<a href="Tip/Pictures/Hnet-image.gif"><img src="Tip/Pictures/Hnet-image.gif" align="center" height="800" width="400"></a>
+<kbd><a href="Tip/Pictures/main_page.png"><img src="Tip/Pictures/main_page.png" height="800" width="350" ></a></kbd>
 </p>
 
 <!--
