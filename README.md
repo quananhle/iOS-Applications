@@ -12,13 +12,24 @@ An app that calculate tip and total
 
 ---
 
-### 2. [Flixster](https://github.com/Quananhle/iOS-Applications/tree/main/flixster)
+### 2. [Twitter](https://github.com/Quananhle/iOS-Applications/tree/main/Twitter)
 
 An app that allows users to browse movies now playing in theaters.
 
 <p float="left">
 <a href="flixster/flixster.gif"><img src="flixster/flixster.gif" height="750" width="350"></a>
 </p>
+
+---
+
+### 3. [Flixster](https://github.com/Quananhle/iOS-Applications/tree/main/flixster)
+
+Part of a Twitter app that allows users to log in to their actual Twitter accounts to view their timeline tweets. Using ```TwitterAPICaller``` to access the Twitter API and ```CocoaPods``` for frameworks
+
+<p float="left">
+<a href="Twitter/Twitter-part2.gif"><img src="Twitter/Twitter-part2.gif" height="750" width="350"></a>
+</p>
+
 
 <!--
 2. [Distance Converter](https://github.com/Quananhle/OOP-JAVA-and-Android-App-Developer/tree/master/Android-App-Developer/App/DistanceConverter)
