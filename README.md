@@ -10,9 +10,15 @@ An app that calculate tip and total
 <kbd><a href="Tip/Pictures/main_page.png"><img src="Tip/Pictures/main_page.png" height="800" width="350" ></a></kbd>
 </p>
 
+---
+
 ### 2. [Flixster](https://github.com/Quananhle/iOS-Applications/tree/main/flixster)
 
 An app that allows users to browse movies now playing in theaters.
+
+<p float="left">
+<a href="flixster/flixster.gif"><img src="flixster/flixster.gif" height="750" width="350"></a>
+</p>
 
 <!--
 2. [Distance Converter](https://github.com/Quananhle/OOP-JAVA-and-Android-App-Developer/tree/master/Android-App-Developer/App/DistanceConverter)
