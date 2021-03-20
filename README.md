@@ -1,7 +1,7 @@
 # iOS-Applications
 Developed in Swift and XCode
 
-1. [Tip Calculator](https://github.com/Quananhle/iOS-Applications/tree/main/Tip)
+### 1. [Tip Calculator](https://github.com/Quananhle/iOS-Applications/tree/main/Tip)
 
 An app that calculate tip and total
 
@@ -10,7 +10,7 @@ An app that calculate tip and total
 <kbd><a href="Tip/Pictures/main_page.png"><img src="Tip/Pictures/main_page.png" height="800" width="350" ></a></kbd>
 </p>
 
-2. [Flixster](https://github.com/Quananhle/iOS-Applications/tree/main/flixster)
+### 2. [Flixster](https://github.com/Quananhle/iOS-Applications/tree/main/flixster)
 
 An app that allows users to browse movies now playing in theaters.
 
