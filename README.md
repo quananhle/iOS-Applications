@@ -3,10 +3,16 @@ Developed in Swift and XCode
 
 1. [Tip Calculator](https://github.com/Quananhle/iOS-Applications/tree/main/Tip)
 
+An app that calculate tip and total
+
 <p float="left">
 <a href="Tip/Pictures/Hnet-image.gif"><img src="Tip/Pictures/Hnet-image.gif" align="center" height="800" width="400"></a>
 <kbd><a href="Tip/Pictures/main_page.png"><img src="Tip/Pictures/main_page.png" height="800" width="350" ></a></kbd>
 </p>
+
+2. [Flixster](https://github.com/Quananhle/iOS-Applications/tree/main/flixster)
+
+An app that allows users to browse movies now playing in theaters.
 
 <!--
 2. [Distance Converter](https://github.com/Quananhle/OOP-JAVA-and-Android-App-Developer/tree/master/Android-App-Developer/App/DistanceConverter)
