@@ -30,56 +30,34 @@ Part of a Twitter app that allows users to log in to their actual Twitter accoun
 <a href="Twitter/Twitter-part2.gif"><img src="Twitter/Twitter-part2.gif" height="750" width="350"></a>
 </p>
 
+---
 
-<!--
-2. [Distance Converter](https://github.com/Quananhle/OOP-JAVA-and-Android-App-Developer/tree/master/Android-App-Developer/App/DistanceConverter)
+### 4. [Parstagram](https://github.com/Quananhle/iOS-Applications/tree/main/Parstagram)
 
-<p float="left">
-<a href="App/pictures/converter_vertical.gif"><img src="App/pictures/converter_vertical.gif" height="750" width="350"></a>
-<a href="App/pictures/converter_horizontal.gif"><img src="App/pictures/converter_horizontal.gif" height="330" width="590"></a>
-</p>
-
-The app that allows the user to select either ```Miles-to-Kilometers``` or ```Kilometers-to-Miles``` conversions.
-  
-3. [Multi-Note Pad](https://github.com/Quananhle/OOP-JAVA-and-Android-App-Developer/tree/master/Android-App-Developer/App/MultiNotesApp)        
-
-<a href="App/pictures/multi_notes.gif"><img src="App/pictures/multi_notes.gif" height="750" width="350"></a>
-
-Uses: ```RecyclerView```, ```Multi-Activity```, ```JSON File```, ```Option-Menus```
-
-This app allows the creation and maintenance of multiple notes. Any number of notes are allowed (including no notes at all). Notes are made up of a title, a note text, and a last-update time.
-
-4. [Stock Watch](https://github.com/Quananhle/OOP-JAVA-and-Android-App-Development/tree/master/Android-App-Developer/App/StockWatch)   
-
-<a href="App/pictures/stock_watch.gif"><img src="App/pictures/stock_watch.gif" height="750" width="350"></a>
-
-Uses: ```Internet API```, ```RecyclerView```, ```Option-Menus```, ```Multi-threads```, ```JSON Data```, ```Swipe-Refresh```, ```Dialogs```, ```SQLite Database```
-
-This app allows the user to display a sorted list of selected stocks. List entries include the stock symbol (and company name), the current price, the daily price change amount and price percent change.
-
-5. [Know Your Government](https://github.com/Quananhle/OOP-and-Android-App-Development/tree/master/Android-App-Developer/App/knowyourgovernment)   
+An instagram-like app that allows users to take and post pics. Using ```Alamofire``` library, ```MessageInputBar```, and ```Parse``` server custom backend database to store and retrieve user posts and ```back4app.com``` to host Parse dashboard
 
 <p float="left">
-<a href="App/pictures/government_vertical.gif"><img src="App/pictures/government_vertical.gif" height="750" width="350"></a>
-<a href="App/pictures/government_vertical_1.gif"><img src="App/pictures/government_vertical_1.gif" height="750" width="350"></a>
-<a href="App/pictures/government_horizontal.gif"><img src="App/pictures/government_horizontal.gif" height="360" width="730"></a>
+<a href="Parstagram/Parstagram-part1.gif"><img src="Parstagram/Parstagram-part1.gif" align="center" height="800" width="400"></a>
+<kbd><a href="Parstagram/Parstagram-part2.gif"><img src="Parstagram/Parstagram-part2.gif" align="center" height="800" width="400"></a></kbd>
 </p>
 
-Uses: ```Location Services```, ```Internet API```, ```Google APIs```, ```Images```, ```Picasso Library```, ```Implicit Intents```, ```TextView Links```, ```RecyclerView```, ```JSON Data```
+---
 
-This app will acquire and display an interactive list of political officials that representthe current location (or aspecified location)at each level of government. 
+### License
 
-__Note__: The app is completely developed on 2020 after the Election Day 11/03/2020
+Copyright 2021 CSUMB
 
-6. [News Gateway](https://github.com/Quananhle/OOP-and-Android-App-Development/tree/master/Android-App-Developer/App/NewsGateway)   
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-<a href="App/pictures/news.gif"><img src="App/pictures/news.gif" height="750" width="350"></a>
+http://www.apache.org/licenses/LICENSE-2.0
 
-Uses: ```Service```, ```Broadcasts & Receivers```, ```Drawer Layout```, ```Fragments```, ```ViewPager```, ```Implicit Intents```, ```TextView Links```, ```RecyclerView```, ```Internet API```, ```NEWS API```, ```JSON Data```
-
-This app displays current news articles from a wide variety of news sources covering a range of news categories.
-
--->
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ⭐️ From [Quan](https://github.com/Quananhle) with :sparkling_heart: 
 <img align="right" width="75" height="20" src="https://visitor-badge.glitch.me/badge?page_id=quananhle.iOS-Applications">
