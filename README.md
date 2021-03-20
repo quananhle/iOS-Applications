@@ -7,8 +7,8 @@ Developed in Swift and XCode
 <a href="Pictures/Hnet-image.gif"><img src="Pictures/Hnet-image.gif" align="center" height="800" width="400"></a>
 <kbd><a href="Pictures/main_page.png"><img src="Pictures/main_page.png" height="800" width="350" ></a></kbd>
 </p>
-<!--
 
+<!--
 2. [Distance Converter](https://github.com/Quananhle/OOP-JAVA-and-Android-App-Developer/tree/master/Android-App-Developer/App/DistanceConverter)
 
 <p float="left">
@@ -55,6 +55,8 @@ __Note__: The app is completely developed on 2020 after the Election Day 11/03/2
 Uses: ```Service```, ```Broadcasts & Receivers```, ```Drawer Layout```, ```Fragments```, ```ViewPager```, ```Implicit Intents```, ```TextView Links```, ```RecyclerView```, ```Internet API```, ```NEWS API```, ```JSON Data```
 
 This app displays current news articles from a wide variety of news sources covering a range of news categories.
+
+-->
 
 ⭐️ From [Quan](https://github.com/Quananhle) with :sparkling_heart: 
 <img align="right" width="75" height="20" src="https://visitor-badge.glitch.me/badge?page_id=quananhle.iOS-Applications">
